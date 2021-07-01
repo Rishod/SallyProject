@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="" />
+    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +24,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="8c06551e-712b-40e8-bfaa-ba872860f2d7" />
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -29,6 +36,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1riWBwoY5wuoRXCF8rBJ8H8RK6y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,6 +44,7 @@
   <component name="PropertiesComponent">
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -228,12 +237,24 @@
       <workItem from="1623775300638" duration="974000" />
       <workItem from="1624371688975" duration="33000" />
       <workItem from="1624959405813" duration="745000" />
-      <workItem from="1625130676055" duration="4675000" />
+      <workItem from="1625130676055" duration="5315000" />
     </task>
+    <task id="LOCAL-00001" summary="fix initial commit">
+      <created>1625145521446</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1625145521446</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix initial commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="328" y="103" key="#Project_Structure" timestamp="1621500623852">
@@ -265,6 +286,10 @@
     </state>
     <state x="401" y="315" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1619696983446" />
     <state x="2138" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1625142889219" />
+    <state x="374" y="97" key="CommitChangelistDialog2" timestamp="1625145520304">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="374" y="97" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1625145520304" />
     <state x="698" y="396" key="DockerComposeFileDialog" timestamp="1619788845301">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -334,6 +359,10 @@
     </state>
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619465811955" />
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1619699073586" />
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1625145550515">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1625145550515" />
     <state width="840" height="525" key="XDebugger.FullValuePopup" timestamp="1621329418681">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

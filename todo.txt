@@ -2,3 +2,4 @@
 2. Handle 404 in advisor (done )
 3. GrantedAuthority issue with constructor (need jwt convert SallyUserDetails not UserDetails) (done)
 4. Handle org.springframework.security.authentication.InternalAuthenticationServiceException in advisor (done)
+5. Integrate coverrals
