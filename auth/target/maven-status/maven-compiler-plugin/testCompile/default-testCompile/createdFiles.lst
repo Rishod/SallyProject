@@ -1,4 +1,0 @@
-com/sally/auth/TestController.class
-com/sally/auth/AuthFilterChainTest.class
-com/sally/auth/JwtUserDetailsFetcherImplTest.class
-com/sally/auth/TestSecurityConfig.class

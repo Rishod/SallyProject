@@ -1,8 +1,0 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: userServiceModule
-          uri: http://user-service:8080/
-          predicates:
-            - Path=/user-service/**
