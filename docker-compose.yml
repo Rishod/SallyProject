@@ -38,6 +38,33 @@ services:
       - sally-user-service-network
   ######
 
+  ### Shop Service ###
+  shop-service:
+    build:
+      context: shop-service
+    ports:
+    - "7003:5005"
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+    depends_on:
+      - shop-service-postgres
+    networks:
+      - sally-gateway-network
+      - sally-shop-service-network
+    command: java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./shop-service.jar
+
+  shop-service-postgres:
+    image: postgres:12.0-alpine
+    environment:
+      POSTGRES_DB: shop-service-db
+      POSTGRES_USER: shop-service
+      POSTGRES_PASSWORD: root
+    networks:
+      - sally-shop-service-network
+  #######
+
+
 networks:
   sally-gateway-network:
   sally-user-service-network:
+  sally-shop-service-network:

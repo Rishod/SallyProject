@@ -8,6 +8,6 @@ public class BadRequestException extends SallyException {
     }
 
     public BadRequestException(ErrorCode errorCode, Throwable cause) {
-        super(HttpStatus.BAD_REQUEST, errorCode, cause);
+        super(HttpStatus.BAD_REQUEST, errorCode, null, cause);
     }
 }

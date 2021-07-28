@@ -5,18 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/aggregator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/UpdateProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/dao/ProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/dao/ProductDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/dao/entity/ProductEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/models/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/models/ShopEndpoints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V2__init_shop.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/com/sally/user/DaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/com/sally/user/SharedPostgreSQLContainer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/test/java/com/sally/user/dao/UserDAOImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-db/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/BadRequestException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/ErrorCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/ErrorCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/SallyException.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/SallyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shop-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/CreateProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/CreateProductRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/CreateProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/models/CreateProductRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/ShopControllerV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/ShopControllerV1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/ShopDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/ShopDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/ShopDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/ShopDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/ShopEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/entity/ShopEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/UserEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/UserEndpoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/services/SalyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/services/SalyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +54,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -40,6 +67,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/dao/ProductDAOImpl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JupyterTrust" id="8c06551e-712b-40e8-bfaa-ba872860f2d7" />
   <component name="MavenImportPreferences">
@@ -70,9 +100,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3643678" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.sally.user.dao" />
       <recent name="com.sally.user.controllers" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -84,6 +116,7 @@
       <recent name="$PROJECT_DIR$/common" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sally.user" />
       <recent name="com.sally.user.models" />
       <recent name="com.sally.domain" />
       <recent name="com.sally.auth" />
@@ -97,11 +130,12 @@
       <recent name="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/services" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.sally.user.models" />
       <recent name="com.sally.shop.controller" />
+      <recent name="com.sally.shop.service" />
+      <recent name="com.sally.user.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.Build &amp; Report">
+  <component name="RunManager" selected="JUnit.UserDAOImplTest.testCreateUser">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -146,17 +180,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserControllerV1Test.testCreateCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserDAOImplTest.testCreateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="user-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sally.user.controllers.*" />
+          <option name="PATTERN" value="com.sally.user.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.sally.user.controllers" />
-      <option name="MAIN_CLASS_NAME" value="com.sally.user.controllers.UserControllerV1Test" />
-      <option name="METHOD_NAME" value="testCreateCustomer" />
+      <option name="PACKAGE_NAME" value="com.sally.user.dao" />
+      <option name="MAIN_CLASS_NAME" value="com.sally.user.dao.UserDAOImplTest" />
+      <option name="METHOD_NAME" value="testCreateUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -212,6 +246,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="shop-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sally.shop.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="user-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sally.user.Application" />
@@ -228,13 +269,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.user-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.shop-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="commandLineOptions" value="--build" />
           <option name="services">
             <list>
-              <option value="user-service" />
+              <option value="shop-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -244,22 +284,23 @@
     </configuration>
     <list>
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.user-service: Compose Deployment" />
-      <item itemvalue="JUnit.UserControllerV1Test.testCreateCustomer" />
       <item itemvalue="JUnit.AuthFilterChainTest" />
       <item itemvalue="JUnit.AuthFilterChainTest.testWithValidToken" />
       <item itemvalue="Maven.Build &amp; Report" />
       <item itemvalue="Remote.User Service Debug" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
+      <item itemvalue="Docker.docker-compose.yml.shop-service: Compose Deployment" />
+      <item itemvalue="Spring Boot.Application (2)" />
+      <item itemvalue="JUnit.UserDAOImplTest.testCreateUser" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuthFilterChainTest" />
-        <item itemvalue="JUnit.AuthFilterChainTest.testWithValidToken" />
+        <item itemvalue="JUnit.UserDAOImplTest.testCreateUser" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.user-service: Compose Deployment" />
-        <item itemvalue="JUnit.UserControllerV1Test.testCreateCustomer" />
+        <item itemvalue="Docker.docker-compose.yml.shop-service: Compose Deployment" />
+        <item itemvalue="JUnit.AuthFilterChainTest.testWithValidToken" />
+        <item itemvalue="JUnit.AuthFilterChainTest" />
       </list>
     </recent_temporary>
   </component>
@@ -285,7 +326,7 @@
       <workItem from="1624371688975" duration="33000" />
       <workItem from="1624959405813" duration="745000" />
       <workItem from="1625130676055" duration="9672000" />
-      <workItem from="1627455628127" duration="4662000" />
+      <workItem from="1627455628127" duration="18620000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -301,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625146063542</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="integrate coveralls">
+      <created>1627461263248</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1627461263248</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +358,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix initial commit" />
     <MESSAGE value="add todo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add todo" />
+    <MESSAGE value="integrate coveralls" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate coveralls" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2055" y="106" key="#Project_Structure" timestamp="1625149022613">
@@ -318,36 +367,41 @@
     </state>
     <state x="328" y="103" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1621500623852" />
     <state x="2055" y="106" key="#Project_Structure/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1625149022613" />
-    <state x="343" y="200" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1627460966542">
+    <state x="241" y="358" key="#SQL_Dialects" timestamp="1627466945388">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="241" y="358" key="#SQL_Dialects/0.0.1680.1050@0.0.1680.1050" timestamp="1627466945388" />
+    <state x="343" y="200" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1627479204618">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="184" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1620119832917" />
     <state x="2027" y="189" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1621188280682" />
-    <state x="343" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627460966542" />
+    <state x="343" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627479204618" />
     <state x="2355" y="277" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1625148939305" />
     <state x="535" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1625156081753">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="535" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619787694024" />
     <state x="535" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1625156081753" />
-    <state x="2426" y="252" key="#com.intellij.ide.util.MemberChooser" timestamp="1625143826417">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser" timestamp="1627475868469">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="2426" y="252" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1619715624561" />
-    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1619702565807" />
+    <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1627475868469" />
     <state x="2426" y="252" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1625143826417" />
-    <state x="578" y="305" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1619881838299">
+    <state x="578" y="305" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1627464407885">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="305" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1619881838299" />
-    <state x="2138" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1625142889219">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state x="578" y="305" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627464407885" />
+    <state x="401" y="1" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1627465489569">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="401" y="315" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1619696983446" />
+    <state x="401" y="1" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627465489569" />
     <state x="2138" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1625142889219" />
-    <state x="374" y="97" key="CommitChangelistDialog2" timestamp="1625146063320">
+    <state x="374" y="97" key="CommitChangelistDialog2" timestamp="1627461262925">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="374" y="97" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1627461262925" />
     <state x="374" y="97" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1625146063320" />
     <state x="698" y="396" key="DockerComposeFileDialog" timestamp="1619788845301">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -357,40 +411,40 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="696" y="266" key="EnvironmentVariablesDialog/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619793371843" />
-    <state width="1878" height="328" key="GridCell.Tab.0.bottom" timestamp="1623768555547">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1638" height="305" key="GridCell.Tab.0.bottom" timestamp="1627482703365">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="328" key="GridCell.Tab.0.bottom/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619796929808" />
     <state width="1878" height="518" key="GridCell.Tab.0.bottom/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1620993976362" />
     <state width="1638" height="328" key="GridCell.Tab.0.bottom/0.0.1680.1050/1680.25.1920.1055@0.0.1680.1050" timestamp="1620137282379" />
-    <state width="1638" height="292" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1623246214191" />
+    <state width="1638" height="305" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1627482703365" />
     <state width="1638" height="292" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1623343516367" />
     <state width="1878" height="328" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1623768555547" />
-    <state width="1878" height="328" key="GridCell.Tab.0.center" timestamp="1623768555545">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1638" height="305" key="GridCell.Tab.0.center" timestamp="1627482703362">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="328" key="GridCell.Tab.0.center/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619796929803" />
     <state width="1878" height="518" key="GridCell.Tab.0.center/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1620993976359" />
     <state width="1638" height="328" key="GridCell.Tab.0.center/0.0.1680.1050/1680.25.1920.1055@0.0.1680.1050" timestamp="1620137282376" />
-    <state width="1638" height="292" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1623246214190" />
+    <state width="1638" height="305" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1627482703362" />
     <state width="1638" height="292" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1623343516365" />
     <state width="1878" height="328" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1623768555545" />
-    <state width="1878" height="328" key="GridCell.Tab.0.left" timestamp="1623768555543">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1638" height="305" key="GridCell.Tab.0.left" timestamp="1627482703361">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="328" key="GridCell.Tab.0.left/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619796929802" />
     <state width="1878" height="518" key="GridCell.Tab.0.left/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1620993976357" />
     <state width="1638" height="328" key="GridCell.Tab.0.left/0.0.1680.1050/1680.25.1920.1055@0.0.1680.1050" timestamp="1620137282374" />
-    <state width="1638" height="292" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1623246214189" />
+    <state width="1638" height="305" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1627482703361" />
     <state width="1638" height="292" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1623343516365" />
     <state width="1878" height="328" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1623768555543" />
-    <state width="1878" height="328" key="GridCell.Tab.0.right" timestamp="1623768555546">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state width="1638" height="305" key="GridCell.Tab.0.right" timestamp="1627482703364">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1638" height="328" key="GridCell.Tab.0.right/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619796929806" />
     <state width="1878" height="518" key="GridCell.Tab.0.right/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1620993976361" />
     <state width="1638" height="328" key="GridCell.Tab.0.right/0.0.1680.1050/1680.25.1920.1055@0.0.1680.1050" timestamp="1620137282377" />
-    <state width="1638" height="292" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1623246214190" />
+    <state width="1638" height="305" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1627482703364" />
     <state width="1638" height="292" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1623343516366" />
     <state width="1878" height="328" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1623768555546" />
     <state width="1638" height="292" key="GridCell.Tab.1.bottom" timestamp="1623343516369">
@@ -413,32 +467,38 @@
     </state>
     <state width="1638" height="292" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1623246218136" />
     <state width="1638" height="292" key="GridCell.Tab.1.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1623343516369" />
-    <state x="328" y="103" key="SettingsEditor" timestamp="1619699073586">
+    <state x="328" y="103" key="SettingsEditor" timestamp="1627463454124">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619465811955" />
-    <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1619699073586" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1625145550515">
+    <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1627463333385">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1627463333385" />
     <state x="440" y="262" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1625145550515" />
     <state width="840" height="525" key="XDebugger.FullValuePopup" timestamp="1621329418681">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="840" height="525" key="XDebugger.FullValuePopup/0.0.1680.1050@0.0.1680.1050" timestamp="1621329418681" />
-    <state x="2411" y="326" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1620991850076">
-      <screen x="1680" y="0" width="1920" height="1080" />
+    <state x="631" y="307" key="chooseDestDirectoryDialog" timestamp="1627464404433">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="631" y="307" key="chooseDestDirectoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627464404433" />
+    <state x="640" y="317" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1627481544105">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="2411" y="326" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1620991850076" />
+    <state x="640" y="317" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627481544105" />
     <state x="246" y="185" key="new project wizard" timestamp="1627456880643">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="246" y="185" key="new project wizard/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619459346220" />
     <state x="246" y="185" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1627456880643" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1621507605842">
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1627473775075">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1621507605842" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1627473775075" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

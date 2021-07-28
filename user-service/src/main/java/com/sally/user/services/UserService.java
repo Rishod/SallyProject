@@ -6,7 +6,7 @@ import com.sally.user.dao.UserDAO;
 import com.sally.user.models.CustomerCreateRequest;
 import com.sally.user.models.ShopOwnerCreateRequest;
 import com.sally.user.models.User;
-import com.sally.user.models.UserEntity;
+import com.sally.user.dao.entity.UserEntity;
 import com.sally.utils.Sets;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

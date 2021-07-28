@@ -11,7 +11,8 @@ public enum ErrorCode {
     ACCESS_DENIED("Access denied for this user"),
     UNSUPPORTED_METHOD("HTTP method not supported for this endpoint"),
     BAD_REQUEST_BODY("Bad request body"),
-    USER_NOT_FOUND_BY_EMAIL("User not found with entered email");
+    USER_NOT_FOUND_BY_EMAIL("User not found with entered email"),
+    PRODUCT_NOT_FOUND_BY_ID("Product not found with entered id");
 
     private String message;
 }
