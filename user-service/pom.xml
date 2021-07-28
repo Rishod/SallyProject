@@ -72,24 +72,11 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            &lt;!&ndash;For displaying git info in actuator&ndash;&gt;-->
-<!--            <plugin>-->
-<!--                <groupId>pl.project13.maven</groupId>-->
-<!--                <artifactId>git-commit-id-plugin</artifactId>-->
-<!--            </plugin>-->
 
+            <!--For displaying git info in actuator-->
             <plugin>
-                <groupId>org.eluder.coveralls</groupId>
-                <artifactId>coveralls-maven-plugin</artifactId>
-                <version>4.3.0</version>
-<!--                <dependencies>-->
-<!--                    &lt;!&ndash;This needs for coveralls (JDK 11)&ndash;&gt;-->
-<!--                    <dependency>-->
-<!--                        <groupId>javax.xml.bind</groupId>-->
-<!--                        <artifactId>jaxb-api</artifactId>-->
-<!--                        <version>2.2.3</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
             </plugin>
 
             <plugin>
