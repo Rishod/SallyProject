@@ -2,7 +2,7 @@ package com.sally.user.dao;
 
 import com.sally.auth.UserRole;
 import com.sally.domain.CommonDAO;
-import com.sally.user.models.UserEntity;
+import com.sally.user.dao.entity.UserEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

@@ -1,8 +1,8 @@
 package com.sally.user.dao;
 
 import com.sally.domain.CommonDAO;
-import com.sally.user.models.ShopEntity;
-import com.sally.user.models.UserEntity;
+import com.sally.user.dao.entity.ShopEntity;
+import com.sally.user.dao.entity.UserEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
@@ -19,8 +19,8 @@ public class ShopDAOImpl extends CommonDAO implements ShopDAO {
     @Override
     public ShopEntity createShop(String shopName, UserEntity ownerUserEntity) {
         ShopEntity shopEntity = ShopEntity.builder()
-                .companyName(shopName)
-                .companyOwner(ownerUserEntity)
+                .name(shopName)
+                .shopOwner(ownerUserEntity)
                 .build();
 
         entityManager.persist(shopEntity);

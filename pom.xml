@@ -25,8 +25,8 @@
         <spring.security.version>5.4.3.RELEASE</spring.security.version>
         <flyway.version>5.2.3</flyway.version>
         <postrgresql.version>42.2.16</postrgresql.version>
-        <testcontainers.postgresql.version>1.15.0-rc2</testcontainers.postgresql.version>
-        <testcontainers.jupiter.version>1.15.0-rc2</testcontainers.jupiter.version>
+        <testcontainers.postgresql.version>1.15.3</testcontainers.postgresql.version>
+        <testcontainers.jupiter.version>1.15.3</testcontainers.jupiter.version>
         <jsonwebtoken.version>0.9.1</jsonwebtoken.version>
         <lombock.version>1.18.12</lombock.version>
         <slf4.version>1.7.5</slf4.version>

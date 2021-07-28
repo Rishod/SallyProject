@@ -1,4 +1,4 @@
-package com.sally.user.models;
+package com.sally.user.dao.entity;
 
 import com.sally.auth.UserRole;
 import com.sally.domain.AbstractEntity;
