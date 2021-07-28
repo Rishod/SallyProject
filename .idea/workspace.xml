@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aggregator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-db/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-db/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/CreateProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/CreateProductRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +34,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JupyterTrust" id="8c06551e-712b-40e8-bfaa-ba872860f2d7" />
@@ -50,6 +64,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="full.screen.before.presentation.mode" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/common-db/src/main/java/com/sally/domain" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -86,14 +101,16 @@
       <recent name="com.sally.shop.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuthFilterChainTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Maven.Build &amp; Report">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,6 +161,35 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Build &amp; Report" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="jacoco:report" />
+                <option value="coveralls:report" />
+                <option value="-DrepoToken=5Z9imKmnXSWCsMXuGxNL1SCbS8XbATLGe" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
     </configuration>
     <configuration name="User Service Debug" type="Remote">
       <module name="SallyProject" />
@@ -202,6 +248,7 @@
       <item itemvalue="JUnit.UserControllerV1Test.testCreateCustomer" />
       <item itemvalue="JUnit.AuthFilterChainTest" />
       <item itemvalue="JUnit.AuthFilterChainTest.testWithValidToken" />
+      <item itemvalue="Maven.Build &amp; Report" />
       <item itemvalue="Remote.User Service Debug" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
@@ -237,7 +284,8 @@
       <workItem from="1623775300638" duration="974000" />
       <workItem from="1624371688975" duration="33000" />
       <workItem from="1624959405813" duration="745000" />
-      <workItem from="1625130676055" duration="5315000" />
+      <workItem from="1625130676055" duration="9672000" />
+      <workItem from="1627455628127" duration="4662000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -246,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625145521446</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add todo">
+      <created>1625146063542</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1625146063542</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,23 +309,27 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix initial commit" />
+    <MESSAGE value="add todo" />
+    <option name="LAST_COMMIT_MESSAGE" value="add todo" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="328" y="103" key="#Project_Structure" timestamp="1621500623852">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="2055" y="106" key="#Project_Structure" timestamp="1625149022613">
+      <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="328" y="103" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1621500623852" />
-    <state x="343" y="200" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1621329561980">
+    <state x="2055" y="106" key="#Project_Structure/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1625149022613" />
+    <state x="343" y="200" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1627460966542">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="304" y="184" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1620119832917" />
     <state x="2027" y="189" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1621188280682" />
-    <state x="343" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1621329561980" />
-    <state x="535" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619787694024">
+    <state x="343" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627460966542" />
+    <state x="2355" y="277" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1625148939305" />
+    <state x="535" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1625156081753">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="535" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619787694024" />
+    <state x="535" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1625156081753" />
     <state x="2426" y="252" key="#com.intellij.ide.util.MemberChooser" timestamp="1625143826417">
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
@@ -286,10 +345,10 @@
     </state>
     <state x="401" y="315" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1619696983446" />
     <state x="2138" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1625142889219" />
-    <state x="374" y="97" key="CommitChangelistDialog2" timestamp="1625145520304">
+    <state x="374" y="97" key="CommitChangelistDialog2" timestamp="1625146063320">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="374" y="97" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1625145520304" />
+    <state x="374" y="97" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1625146063320" />
     <state x="698" y="396" key="DockerComposeFileDialog" timestamp="1619788845301">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -371,11 +430,11 @@
       <screen x="1680" y="0" width="1920" height="1080" />
     </state>
     <state x="2411" y="326" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1680.1050/1680.0.1920.1080@1680.0.1920.1080" timestamp="1620991850076" />
-    <state x="246" y="185" key="new project wizard" timestamp="1621503428116">
+    <state x="246" y="185" key="new project wizard" timestamp="1627456880643">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="246" y="185" key="new project wizard/0.0.1680.1050/1680.0.1920.1080@0.0.1680.1050" timestamp="1619459346220" />
-    <state x="246" y="185" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1621503428116" />
+    <state x="246" y="185" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1627456880643" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1621507605842">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
