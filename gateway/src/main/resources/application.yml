@@ -6,8 +6,6 @@ spring:
           uri: http://user-service:8080/
           predicates:
             - Path=/user-service/**
-          filters:
-            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
         - id: shopServiceModule
           uri: http://shop-service:8080
           predicates:

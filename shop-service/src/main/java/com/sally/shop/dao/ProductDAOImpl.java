@@ -7,6 +7,7 @@ import com.sally.shop.dao.entity.ProductEntity;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import javax.persistence.EntityManager;
@@ -56,5 +57,18 @@ public class ProductDAOImpl extends CommonDAO implements ProductDAO {
     public Optional<ProductEntity> getProductById(UUID productId) {
         return findSingleResult(entityManager.createQuery("select p from ProductEntity p where p.id = :id", ProductEntity.class)
                 .setParameter("id", productId));
+    }
+
+    @Override
+    public List<ProductEntity> getAllProducts() {
+        return entityManager.createQuery("select p from ProductEntity p", ProductEntity.class).getResultList();
+    }
+
+    @Override
+    public void delete(UUID shopId, UUID productId) {
+        final ProductEntity productEntity = findProductByIdAndShop(productId, shopId)
+                .orElseThrow(() -> new NotFoundException(ErrorCode.PRODUCT_NOT_FOUND_BY_ID));
+
+        entityManager.remove(productEntity);
     }
 }

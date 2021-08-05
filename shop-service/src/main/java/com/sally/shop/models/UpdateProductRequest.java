@@ -1,4 +1,4 @@
-package com.sally.shop.controller;
+package com.sally.shop.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
