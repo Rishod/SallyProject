@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @Service
 public class ProductService {
-    private ProductDAO productDAO;
+    private final ProductDAO productDAO;
 
     public ProductService(ProductDAO productDAO) {
         this.productDAO = productDAO;

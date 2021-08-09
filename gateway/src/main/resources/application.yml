@@ -1,12 +1,12 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: userServiceModule
-          uri: http://user-service:8080/
-          predicates:
-            - Path=/user-service/**
-        - id: shopServiceModule
-          uri: http://shop-service:8080
-          predicates:
-            - Path=/shop-service/**
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: userServiceModule
+#          uri: http://user-service:8080/
+#          predicates:
+#            - Path=/user-service/**
+#        - id: shopServiceModule
+#          uri: http://shop-service:8080
+#          predicates:
+#            - Path=/shop-service/**
