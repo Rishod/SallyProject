@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  product-search-service:
+    build:
+      context: .
+    ports:
+    - "8080:8080"
+    - "7001:5005"
+    depends_on:
+      - ps-elasticksearch
+    command: java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./product-search-service.jar
+
+  ps-elasticksearch:
+    image: "elasticsearch:7.6.2"
+    environment:
+      - "discovery.type=single-node"
+    ports:
+    - "9200:9200"
