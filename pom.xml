@@ -173,6 +173,7 @@
         <module>shop-service</module>
         <module>common-db</module>
         <module>gateway</module>
+        <module>product-search-service</module>
     </modules>
 
     <build>

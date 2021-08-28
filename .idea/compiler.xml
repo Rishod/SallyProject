@@ -10,6 +10,7 @@
         <module name="auth" />
         <module name="aggregator" />
         <module name="shop-service" />
+        <module name="product-search-service" />
         <module name="common-utils" />
         <module name="user-service" />
         <module name="inner" />
@@ -32,6 +33,7 @@
       <module name="common-utils" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="inner" options="-parameters" />
+      <module name="product-search-service" options="-parameters" />
       <module name="shop-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
