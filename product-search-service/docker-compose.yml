@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 
 services:
   product-search-service:
@@ -13,5 +13,6 @@ services:
 
   ps-elasticksearch:
     image: "elasticsearch:7.6.2"
+    container_name: ps-elasticksearch
     environment:
       - "discovery.type=single-node"

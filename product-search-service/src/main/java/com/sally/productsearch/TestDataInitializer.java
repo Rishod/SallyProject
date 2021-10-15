@@ -17,7 +17,7 @@ public class TestDataInitializer implements ApplicationListener<ApplicationReady
 
     @Override
     public void onApplicationEvent(ApplicationReadyEvent event) {
-        ProductEntity productEntity = new ProductEntity("id_wrfwef", "test_product", "desc", "test_shop");
+        ProductEntity productEntity = new ProductEntity("id_wrfwef", "test_product title1 title2", "desc, desc1, desc2", "test_shop");
         productRepository.save(productEntity);
     }
 }

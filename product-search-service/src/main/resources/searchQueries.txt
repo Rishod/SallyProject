@@ -1,0 +1,6 @@
+{
+    "multi_match" : {
+      "query":    "?0",
+      "fields": [ "title", "description", "shopName" ]
+    }
+}

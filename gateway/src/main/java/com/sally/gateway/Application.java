@@ -24,6 +24,10 @@ public class Application {
                         .path("/shop-service/**")
                         .uri("http://shop-service:8080")
                         .id("shopServiceModule"))
+                .route(p -> p
+                        .path("/product-search-service/**")
+                        .uri("http://product-search-service:8080")
+                        .id("productSearchServiceModule"))
                 .build();
     }
 

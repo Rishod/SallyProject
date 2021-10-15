@@ -7,7 +7,7 @@ services:
     build:
       context: gateway
     ports:
-      - "8001:8080"
+      - "8080:8080"
       - "7001:5005"
     networks:
       - sally-gateway-network
@@ -63,8 +63,31 @@ services:
       - sally-shop-service-network
   #######
 
+  ### Product Search Service
+  product-search-service:
+    build:
+      context: product-search-service
+    ports:
+      - "7004:5005"
+    depends_on:
+      - ps-elasticksearch
+    command: java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./product-search-service.jar
+    networks:
+      - sally-gateway-network
+      - sally-product-search-service-network
+
+  ps-elasticksearch:
+    image: "elasticsearch:7.6.2"
+    container_name: ps-elasticksearch
+    environment:
+      - "discovery.type=single-node"
+    networks:
+      - sally-product-search-service-network
+  #######
+
 
 networks:
   sally-gateway-network:
   sally-user-service-network:
   sally-shop-service-network:
+  sally-product-search-service-network:
