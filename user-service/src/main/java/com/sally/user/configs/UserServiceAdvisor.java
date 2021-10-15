@@ -18,11 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice
 public class UserServiceAdvisor extends CommonExceptionAdvisor {
 
-    @ExceptionHandler(AccessDeniedException.class)
-    public ResponseEntity<ResultError> handleAccessDenied(final HttpServletRequest request, final AccessDeniedException e) {
-        return new ResponseEntity<>(ResultError.of(ErrorCode.ACCESS_DENIED), HttpStatus.FORBIDDEN);
-    }
-
     @ExceptionHandler(InternalAuthenticationServiceException.class)
     public ResponseEntity<ResultError> handleAuthenticationException(final HttpServletRequest request,
                                                                      InternalAuthenticationServiceException exception) {

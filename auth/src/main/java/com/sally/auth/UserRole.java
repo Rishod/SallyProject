@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 @Getter
 @AllArgsConstructor
 public enum UserRole {
+    SUPER_USER(Roles.SUPER_USER),
     CUSTOMER(Roles.CUSTOMER),
     SHOP_OWNER(Roles.SHOP_OWNER);
 

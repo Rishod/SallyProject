@@ -9,6 +9,8 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
@@ -54,5 +56,10 @@ public abstract class CommonExceptionAdvisor implements ResponseBodyAdvice<Objec
                                   Class<? extends HttpMessageConverter<?>> aClass,
                                   ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse) {
         return null;
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<ResultError> handleAccessDenied(final HttpServletRequest request, final AccessDeniedException e) {
+        return new ResponseEntity<>(ResultError.of(ErrorCode.ACCESS_DENIED), HttpStatus.FORBIDDEN);
     }
 }

@@ -73,6 +73,7 @@ public class UserControllerV1 {
     }
 
     @PostMapping(SHOP_OWNER)
+    @PreAuthorize("hasRole('ROLE_SUPER_USER')")
     public User createShopOwner(@RequestBody ShopOwnerCreateRequest createRequest) {
         return userService.createShopOwner(createRequest);
     }

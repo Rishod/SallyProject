@@ -3,11 +3,14 @@ package com.sally.user.services;
 import com.sally.auth.UserRole;
 import com.sally.user.dao.ShopDAO;
 import com.sally.user.dao.UserDAO;
+import com.sally.user.dao.entity.ShopEntity;
 import com.sally.user.models.CustomerCreateRequest;
+import com.sally.user.models.Shop;
 import com.sally.user.models.ShopOwnerCreateRequest;
 import com.sally.user.models.User;
 import com.sally.user.dao.entity.UserEntity;
 import com.sally.utils.Sets;
+import io.jsonwebtoken.lang.Collections;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -40,6 +43,14 @@ public class UserService {
         return User.builder()
                 .username(userEntity.getUsername())
                 .roles(userEntity.getRoles())
+                .shop(shopDAO.findByOwnerId(userEntity.getId()).map(this::mapShop).orElse(null))
+                .build();
+    }
+
+    private Shop mapShop(ShopEntity shopEntity) {
+        return Shop.builder()
+                .id(shopEntity.getId())
+                .name(shopEntity.getName())
                 .build();
     }
 

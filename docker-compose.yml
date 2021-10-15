@@ -65,6 +65,7 @@ services:
 
   ### Product Search Service
   product-search-service:
+    restart: on-failure
     build:
       context: product-search-service
     ports:

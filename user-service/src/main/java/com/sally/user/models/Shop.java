@@ -1,19 +1,17 @@
 package com.sally.user.models;
 
-import com.sally.auth.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
+import java.util.UUID;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
-    private String username;
-    private Set<UserRole> roles;
-    private Shop shop;
+public class Shop {
+    private UUID id;
+    private String name;
 }

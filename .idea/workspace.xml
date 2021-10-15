@@ -28,18 +28,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="add product-search-service">
-      <change afterPath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/controllers/ProductSearchEndpoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product-search-service/src/main/resources/searchQueries.txt" afterDir="false" />
+    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/SuperUserInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/Shop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V3__init_test_data.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/Roles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/CommonExceptionAdvisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/CommonExceptionAdvisor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/sally/gateway/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/sally/gateway/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-search-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-search-service/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/TestDataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/TestDataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/controllers/ProductSearchControllerV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/controllers/ProductSearchControllerV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-search-service/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-search-service/src/main/resources/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/configs/UserServiceAdvisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/configs/UserServiceAdvisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/controllers/UserControllerV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/controllers/UserControllerV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/ShopDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/ShopDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V2__init_shop.sql" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V2__init_shop.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,18 +151,29 @@
       <recent name="$PROJECT_DIR$/common" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.ps-elasticksearch: Compose Deployment">
-    <configuration name="ProductDAOImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop-service" />
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+    <configuration name="TestDataGeneration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sally.user.TestDataGeneration" />
+      <module name="user-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.sally.shop.dao.*" />
+          <option name="PATTERN" value="com.sally.user.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.sally.shop.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.sally.shop.dao.ProductDAOImplTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -280,7 +299,6 @@
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.product-search-service: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.ps-elasticksearch: Compose Deployment" />
-      <item itemvalue="JUnit.ProductDAOImplTest" />
       <item itemvalue="JUnit.ProductServiceTest" />
       <item itemvalue="Maven.Build &amp; Report" />
       <item itemvalue="Remote.User Service Debug" />
@@ -288,14 +306,15 @@
       <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Spring Boot.Application (2)" />
       <item itemvalue="Spring Boot.Application (3)" />
+      <item itemvalue="Application.TestDataGeneration" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Application.TestDataGeneration" />
         <item itemvalue="Docker.docker-compose.yml.ps-elasticksearch: Compose Deployment" />
         <item itemvalue="Docker.product-search-service: Compose Deployment" />
         <item itemvalue="JUnit.ProductServiceTest" />
-        <item itemvalue="JUnit.ProductDAOImplTest" />
       </list>
     </recent_temporary>
   </component>
@@ -334,7 +353,7 @@
       <workItem from="1632993865287" duration="938000" />
       <workItem from="1633521822135" duration="1256000" />
       <workItem from="1634245067614" duration="7846000" />
-      <workItem from="1634302331765" duration="160000" />
+      <workItem from="1634302331765" duration="8499000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -385,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630155334510</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="integrate product-search service to cluster">
+      <created>1634302764514</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634302764514</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +449,8 @@
     <MESSAGE value="complete shop service endpoint" />
     <MESSAGE value="shop service fix + tests&#10;gateway: moving config to java code" />
     <MESSAGE value="add product-search-service" />
-    <option name="LAST_COMMIT_MESSAGE" value="add product-search-service" />
+    <MESSAGE value="integrate product-search service to cluster" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrate product-search service to cluster" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1192" y="254" key="#Docker" timestamp="1634302490635">
@@ -434,24 +461,24 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1076" y="456" key="#Environment_variables/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634301873526" />
-    <state x="-1545" y="106" key="#Project_Structure" timestamp="1634301216201">
+    <state x="-1545" y="106" key="#Project_Structure" timestamp="1634304857675">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1545" y="106" key="#Project_Structure/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634301216201" />
+    <state x="-1545" y="106" key="#Project_Structure/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634304857675" />
     <state x="2055" y="106" key="#Project_Structure/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628169501292" />
     <state x="241" y="358" key="#SQL_Dialects" timestamp="1627466945388">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="241" y="358" key="#SQL_Dialects/0.0.1680.1050@0.0.1680.1050" timestamp="1627466945388" />
-    <state x="-1260" y="132" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634297358805">
+    <state x="-1557" y="119" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634307256529">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1260" y="132" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634297358805" />
+    <state x="-1557" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634307256529" />
     <state x="343" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627479204618" />
-    <state x="-1174" y="252" key="#com.intellij.ide.util.MemberChooser" timestamp="1630151094780">
+    <state x="-1174" y="252" key="#com.intellij.ide.util.MemberChooser" timestamp="1634303745953">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1174" y="252" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630151094780" />
+    <state x="-1174" y="252" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634303745953" />
     <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1627475868469" />
     <state x="2426" y="252" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170410213" />
     <state x="578" y="305" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1627464407885">
@@ -466,10 +493,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938492525" />
-    <state x="-1195" y="72" key="CommitChangelistDialog2" timestamp="1634300471353">
+    <state x="-1195" y="72" key="CommitChangelistDialog2" timestamp="1634302763987">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634300471353" />
+    <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634302763987" />
     <state x="125" y="65" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1627483022508" />
     <state x="2405" y="72" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170841639" />
     <state x="-1440" y="66" width="1344" height="840" key="DiffContextDialog" timestamp="1634297413369">
@@ -480,28 +507,28 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1210" y="411" key="Github.CreatePullRequestDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1632302290126" />
-    <state width="1878" height="517" key="GridCell.Tab.0.bottom" timestamp="1631285754139">
+    <state width="1878" height="474" key="GridCell.Tab.0.bottom" timestamp="1634306731536">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="517" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1631285754139" />
+    <state width="1878" height="474" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634306731536" />
     <state width="1638" height="203" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1627483043767" />
     <state width="1638" height="203" key="GridCell.Tab.0.bottom/0.25.1680.947@0.25.1680.947" timestamp="1627891708870" />
-    <state width="1878" height="517" key="GridCell.Tab.0.center" timestamp="1631285754137">
+    <state width="1878" height="474" key="GridCell.Tab.0.center" timestamp="1634306731535">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="517" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1631285754137" />
+    <state width="1878" height="474" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634306731535" />
     <state width="1638" height="203" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1627483043764" />
     <state width="1638" height="203" key="GridCell.Tab.0.center/0.25.1680.947@0.25.1680.947" timestamp="1627891708868" />
-    <state width="1878" height="517" key="GridCell.Tab.0.left" timestamp="1631285754135">
+    <state width="1878" height="474" key="GridCell.Tab.0.left" timestamp="1634306731534">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="517" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1631285754135" />
+    <state width="1878" height="474" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634306731534" />
     <state width="1638" height="203" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1627483043761" />
     <state width="1638" height="203" key="GridCell.Tab.0.left/0.25.1680.947@0.25.1680.947" timestamp="1627891708867" />
-    <state width="1878" height="517" key="GridCell.Tab.0.right" timestamp="1631285754138">
+    <state width="1878" height="474" key="GridCell.Tab.0.right" timestamp="1634306731536">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="517" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1631285754138" />
+    <state width="1878" height="474" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634306731536" />
     <state width="1638" height="203" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1627483043765" />
     <state width="1638" height="203" key="GridCell.Tab.0.right/0.25.1680.947@0.25.1680.947" timestamp="1627891708869" />
     <state width="1878" height="517" key="GridCell.Tab.1.bottom" timestamp="1631285754143">
@@ -528,10 +555,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
-    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2" timestamp="1630155339998">
+    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2" timestamp="1634302766842">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630155339998" />
+    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634302766842" />
     <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1627483026863" />
     <state x="2183" y="269" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170843940" />
     <state x="631" y="307" key="chooseDestDirectoryDialog" timestamp="1627464404433">
@@ -551,15 +578,19 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1432" y="273" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938511928" />
+    <state x="-1261" y="295" width="622" height="490" key="find.popup" timestamp="1634310798039">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1261" y="295" width="622" height="490" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634310798039" />
     <state x="-1539" y="53" width="942" height="820" key="new project wizard" timestamp="1630145470303">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1539" y="53" width="942" height="820" key="new project wizard/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630145470303" />
     <state x="246" y="185" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1627456880643" />
-    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1630417955664">
+    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1634310819077">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630417955664" />
+    <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634310819077" />
     <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1627473775075" />
     <state x="2257" y="240" width="766" height="696" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628169716332" />
   </component>

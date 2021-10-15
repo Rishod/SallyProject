@@ -30,7 +30,7 @@ public class ShopDAOImpl extends CommonDAO implements ShopDAO {
 
     @Override
     public Optional<ShopEntity> findByOwnerId(UUID userEntityId) {
-        return findSingleResult(entityManager.createQuery("select shop from ShopEntity shop where shop.companyOwner.id = :ownerId", ShopEntity.class)
+        return findSingleResult(entityManager.createQuery("select shop from ShopEntity shop where shop.shopOwner.id = :ownerId", ShopEntity.class)
                 .setParameter("ownerId", userEntityId));
     }
 }
