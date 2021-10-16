@@ -2,13 +2,13 @@ package com.sally.shop.controller;
 
 import static com.sally.shop.ShopEndpoints.PRODUCT;
 import static com.sally.shop.ShopEndpoints.PRODUCT_BY_ID;
-import static com.sally.shop.ShopEndpoints.V1;
+import static com.sally.shop.ShopEndpoints.V2;
 
 import com.sally.api.Product;
 import com.sally.api.requests.CreateProductRequest;
 import com.sally.api.requests.UpdateProductRequest;
 import com.sally.auth.SalyUserDetails;
-import com.sally.shop.service.ProductServiceImpl;
+import com.sally.shop.eventsource.EventSourcedProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -23,29 +23,29 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 @Slf4j
 @RestController
-@RequestMapping(V1)
-public class ShopControllerV1 {
+@RequestMapping(V2)
+public class ShopControllerV2 {
+    private final EventSourcedProductService productService;
 
-    private ProductServiceImpl productService;
-
-    public ShopControllerV1(ProductServiceImpl productService) {
+    public ShopControllerV2(EventSourcedProductService productService) {
         this.productService = productService;
     }
 
     @PostMapping(PRODUCT)
     @PreAuthorize("hasRole('ROLE_SHOP_OWNER')")
-    public Product createProduct(@RequestBody CreateProductRequest request,
-                                 @AuthenticationPrincipal final SalyUserDetails userDetails) {
+    public CompletableFuture<UUID> createProduct(@RequestBody CreateProductRequest request,
+                                                   @AuthenticationPrincipal final SalyUserDetails userDetails) {
         final UUID shopId = userDetails.getShopDetails().getId();
         return productService.saveProduct(shopId, request);
     }
 
     @PutMapping(PRODUCT)
     @PreAuthorize("hasRole('ROLE_SHOP_OWNER')")
-    public Product editProduct(@RequestBody UpdateProductRequest request, @AuthenticationPrincipal SalyUserDetails userDetails) {
+    public CompletableFuture<UUID> editProduct(@RequestBody UpdateProductRequest request, @AuthenticationPrincipal SalyUserDetails userDetails) {
         final UUID shopId = userDetails.getShopDetails().getId();
         return productService.updateProduct(shopId, request);
     }
@@ -58,12 +58,12 @@ public class ShopControllerV1 {
     }
 
     @GetMapping(PRODUCT_BY_ID)
-    public Product getById(@PathVariable(name = "id") UUID productId) {
+    public CompletableFuture<Product> getById(@PathVariable(name = "id") UUID productId) {
         return productService.getProduct(productId);
     }
 
     @GetMapping(PRODUCT)
-    public List<Product> getListProducts() {
+    public CompletableFuture<List<Product>> getListProducts() {
         return productService.getProducts();
     }
 }

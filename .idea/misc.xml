@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/aggregator/pom.xml" />
         <option value="$PROJECT_DIR$/common/inner/pom.xml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/events-api/pom.xml" />
       </set>
     </option>
   </component>

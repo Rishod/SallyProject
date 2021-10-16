@@ -1,14 +1,15 @@
-package com.sally.user.models;
+package com.sally.api.requests;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ShopOwnerCreateRequest {
+public class CustomerCreateRequest {
     private String username;
     private String password;
-    private String companyName;
 }

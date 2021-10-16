@@ -1,19 +1,18 @@
 package com.sally.user.controllers;
 
-import static com.sally.user.models.UserEndpoints.CUSTOMER;
-import static com.sally.user.models.UserEndpoints.V1;
+import static com.sally.user.UserEndpoints.CUSTOMER;
+import static com.sally.user.UserEndpoints.V1;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sally.api.User;
+import com.sally.api.UserRole;
+import com.sally.api.requests.CustomerCreateRequest;
 import com.sally.auth.JwtUserDetailsFetcher;
-import com.sally.auth.UserRole;
-import com.sally.user.models.CustomerCreateRequest;
-import com.sally.user.models.User;
 import com.sally.user.services.JwtUserDetailsGenerator;
 import com.sally.user.services.SalyUserDetailsService;
 import com.sally.user.services.UserService;

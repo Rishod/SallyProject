@@ -1,9 +1,8 @@
 package com.sally.user.dao;
 
-
 import static org.assertj.core.api.Assertions.assertThat;
 
-import com.sally.auth.UserRole;
+import com.sally.api.UserRole;
 import com.sally.user.DaoTest;
 import com.sally.user.dao.entity.UserEntity;
 import com.sally.utils.Sets;

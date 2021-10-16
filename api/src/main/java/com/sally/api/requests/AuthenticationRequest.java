@@ -1,4 +1,4 @@
-package com.sally.user.models;
+package com.sally.api.requests;
 
 import lombok.Data;
 

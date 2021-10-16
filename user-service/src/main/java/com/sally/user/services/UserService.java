@@ -1,13 +1,13 @@
 package com.sally.user.services;
 
-import com.sally.auth.UserRole;
+import com.sally.api.Shop;
+import com.sally.api.User;
+import com.sally.api.UserRole;
+import com.sally.api.requests.CustomerCreateRequest;
+import com.sally.api.requests.ShopOwnerCreateRequest;
 import com.sally.user.dao.ShopDAO;
 import com.sally.user.dao.UserDAO;
 import com.sally.user.dao.entity.ShopEntity;
-import com.sally.user.models.CustomerCreateRequest;
-import com.sally.user.models.Shop;
-import com.sally.user.models.ShopOwnerCreateRequest;
-import com.sally.user.models.User;
 import com.sally.user.dao.entity.UserEntity;
 import com.sally.utils.Sets;
 import io.jsonwebtoken.lang.Collections;

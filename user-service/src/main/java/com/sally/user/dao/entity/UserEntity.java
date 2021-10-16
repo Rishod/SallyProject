@@ -1,6 +1,6 @@
 package com.sally.user.dao.entity;
 
-import com.sally.auth.UserRole;
+import com.sally.api.UserRole;
 import com.sally.domain.AbstractEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;

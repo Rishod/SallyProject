@@ -1,6 +1,6 @@
 package com.sally.user;
 
-import com.sally.auth.UserRole;
+import com.sally.api.UserRole;
 import com.sally.user.dao.UserDAO;
 import com.sally.user.dao.entity.UserEntity;
 import com.sally.utils.Sets;

@@ -1,4 +1,4 @@
-package com.sally.user.models;
+package com.sally.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

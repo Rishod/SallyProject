@@ -1,72 +1,20 @@
 package com.sally.shop.service;
 
-import com.sally.exceptions.ErrorCode;
-import com.sally.exceptions.NotFoundException;
-import com.sally.shop.models.UpdateProductRequest;
-import com.sally.shop.dao.entity.ProductEntity;
-import com.sally.shop.dao.ProductDAO;
-import com.sally.shop.models.CreateProductRequest;
-import com.sally.shop.models.Product;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import com.sally.api.Product;
+import com.sally.api.requests.CreateProductRequest;
+import com.sally.api.requests.UpdateProductRequest;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
-@Slf4j
-@Service
-public class ProductService {
-    private final ProductDAO productDAO;
+public interface ProductService {
+    Product saveProduct(UUID shopId, CreateProductRequest request);
 
-    public ProductService(ProductDAO productDAO) {
-        this.productDAO = productDAO;
-    }
+    Product updateProduct(UUID shopId, UpdateProductRequest request);
 
-    @Transactional
-    public Product saveProduct(final UUID shopId, final CreateProductRequest request) {
-        final ProductEntity productEntity = productDAO.saveProduct(shopId, request.getName(), request.getDescription(),
-                request.getPrice());
+    Product getProduct(UUID productId);
 
-        return mapProduct(productEntity);
-    }
+    List<Product> getProducts();
 
-    private Product mapProduct(final ProductEntity productEntity) {
-        return Product.builder()
-                .id(productEntity.getId())
-                .name(productEntity.getName())
-                .description(productEntity.getDescription())
-                .price(productEntity.getPrice())
-                .shopId(productEntity.getShopId())
-                .build();
-    }
-
-    @Transactional
-    public Product updateProduct(final UUID shopId, final UpdateProductRequest request) {
-        final ProductEntity productEntity = productDAO.updateProduct(request.getId(), shopId, request.getName(),
-                request.getDescription(), request.getPrice());
-
-        return mapProduct(productEntity);
-    }
-
-    @Transactional
-    public Product getProduct(UUID productId) {
-        return productDAO.getProductById(productId)
-                .map(this::mapProduct)
-                .orElseThrow(() -> new NotFoundException(ErrorCode.PRODUCT_NOT_FOUND_BY_ID));
-    }
-
-    @Transactional
-    public List<Product> getProducts() {
-        return productDAO.getAllProducts()
-                .stream()
-                .map(this::mapProduct)
-                .collect(Collectors.toList());
-    }
-
-    @Transactional
-    public void deleteProduct(UUID shopId, UUID productId) {
-        productDAO.delete(shopId, productId);
-    }
+    void deleteProduct(UUID shopId, UUID productId);
 }

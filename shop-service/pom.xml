@@ -33,6 +33,11 @@
             <artifactId>common-db</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.sally</groupId>
+            <artifactId>api</artifactId>
+        </dependency>
+
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -70,6 +75,11 @@
             <groupId>org.testcontainers</groupId>
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.axonframework</groupId>
+            <artifactId>axon-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 

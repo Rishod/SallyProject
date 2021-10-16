@@ -4,10 +4,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
+import com.sally.api.Product;
+import com.sally.api.requests.CreateProductRequest;
 import com.sally.shop.dao.ProductDAO;
 import com.sally.shop.dao.entity.ProductEntity;
-import com.sally.shop.models.CreateProductRequest;
-import com.sally.shop.models.Product;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -18,10 +18,10 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 @ExtendWith({MockitoExtension.class})
-class ProductServiceTest {
+class ProductServiceImplTest {
 
     @InjectMocks
-    private ProductService productService;
+    private ProductServiceImpl productService;
     @Mock
     private ProductDAO productDAO;
 

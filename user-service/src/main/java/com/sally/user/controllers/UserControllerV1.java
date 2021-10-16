@@ -1,19 +1,19 @@
 package com.sally.user.controllers;
 
-import static com.sally.user.models.UserEndpoints.AUTHENTICATE;
-import static com.sally.user.models.UserEndpoints.CUSTOMER;
-import static com.sally.user.models.UserEndpoints.SHOP_OWNER;
-import static com.sally.user.models.UserEndpoints.USER;
-import static com.sally.user.models.UserEndpoints.V1;
+import static com.sally.user.UserEndpoints.AUTHENTICATE;
+import static com.sally.user.UserEndpoints.CUSTOMER;
+import static com.sally.user.UserEndpoints.SHOP_OWNER;
+import static com.sally.user.UserEndpoints.USER;
+import static com.sally.user.UserEndpoints.V1;
 
+import com.sally.api.AuthenticationResponse;
+import com.sally.api.User;
+import com.sally.api.requests.AuthenticationRequest;
+import com.sally.api.requests.CustomerCreateRequest;
+import com.sally.api.requests.ShopOwnerCreateRequest;
 import com.sally.auth.SalyUserDetails;
 import com.sally.exceptions.BadRequestException;
 import com.sally.exceptions.ErrorCode;
-import com.sally.user.models.AuthenticationRequest;
-import com.sally.user.models.AuthenticationResponse;
-import com.sally.user.models.CustomerCreateRequest;
-import com.sally.user.models.ShopOwnerCreateRequest;
-import com.sally.user.models.User;
 import com.sally.user.services.JwtUserDetailsGenerator;
 import com.sally.user.services.SalyUserDetailsService;
 import com.sally.user.services.UserService;

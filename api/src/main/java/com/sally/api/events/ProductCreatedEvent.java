@@ -1,18 +1,23 @@
-package com.sally.shop.models;
+package com.sally.api.events;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
-@NoArgsConstructor
+@Builder
 @AllArgsConstructor
-public class UpdateProductRequest {
-    private UUID id;
+@NoArgsConstructor
+public class ProductCreatedEvent {
+    private UUID productId;
     private String name;
     private String description;
     private BigDecimal price;
+    private LocalDateTime createdAt;
+    private UUID shopId;
 }

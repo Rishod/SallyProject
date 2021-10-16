@@ -29,25 +29,70 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/SuperUserInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/Shop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V3__init_test_data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/commands/CreateProductCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/commands/DeleteProductCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/commands/UpdateProductCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/events/ProductCreatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/events/ProductDeletedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/events/ProductUpdatedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/query/GetAllProductsQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/query/GetAllProductsQueryResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/query/GetProductByIdQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/query/GetProductByIdQueryResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/query/GetProductsForShopQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/query/GetProductsForShopQueryResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/projections/ProductProjection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/ShopControllerV2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/eventsource/EventSourcedProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/eventsource/ProductAggregate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/service/ProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shop-service/src/main/resources/db/migration/V2__initial_axon_setup.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/Roles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/AuthorityImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/AuthorityImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/Roles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/SalyUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/SalyUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/SalyUserDetailsWithPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/SalyUserDetailsWithPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/main/java/com/sally/auth/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/src/test/java/com/sally/auth/AuthFilterChainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth/src/test/java/com/sally/auth/AuthFilterChainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/CommonExceptionAdvisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-utils/src/main/java/com/sally/exceptions/CommonExceptionAdvisor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/configs/UserServiceAdvisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/configs/UserServiceAdvisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-search-service/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-search-service/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-search-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-search-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/entities/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-search-service/src/main/java/com/sally/productsearch/entities/ProductEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-search-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-search-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/ShopControllerV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/controller/ShopControllerV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/models/CreateProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/requests/CreateProductRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/models/ShopEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/ShopEndpoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/models/UpdateProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/requests/UpdateProductRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/java/com/sally/shop/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/resources/application-dev.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/resources/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop-service/src/test/java/com/sally/shop/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/test/java/com/sally/shop/service/ProductServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/SuperUserInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/SuperUserInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/controllers/UserControllerV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/controllers/UserControllerV1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/ShopDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/ShopDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/dao/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/AuthenticationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/requests/AuthenticationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/AuthenticationResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/CustomerCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/requests/CustomerCreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/ShopOwnerCreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/requests/ShopOwnerCreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/sally/api/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/models/UserEndpoints.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/UserEndpoints.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/java/com/sally/user/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application-dev.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application-prod.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V2__init_shop.sql" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V2__init_shop.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/sally/user/controllers/UserControllerV1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/com/sally/user/controllers/UserControllerV1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/test/java/com/sally/user/dao/UserDAOImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/test/java/com/sally/user/dao/UserDAOImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +113,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -109,7 +154,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop-service/src/test/java/com/sally/shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shop-service/src/main/resources/db/migration" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -117,11 +162,6 @@
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.sally.shop.controller" />
-      <recent name="com.sally.shop.service" />
-      <recent name="com.sally.user.models" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.sally.shop.service" />
       <recent name="com.sally.shop.dao" />
@@ -131,40 +171,36 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.sally.user" />
-      <recent name="com.sally.user.models" />
-      <recent name="com.sally.domain" />
-      <recent name="com.sally.auth" />
-      <recent name="com.sally.utils" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/shop-service/src/test/java/com/sally/shop" />
-      <recent name="$PROJECT_DIR$/common-db/src/test/java/com/sally/domain" />
-      <recent name="$PROJECT_DIR$/common-db/src/main/java/com/sally/domain" />
-      <recent name="$PROJECT_DIR$/user-service/src/main/resources" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/gcp" />
       <recent name="$PROJECT_DIR$/user-service/src/main/resources/db/migration" />
       <recent name="$PROJECT_DIR$/common" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sally.api" />
+      <recent name="com.sally.user" />
+      <recent name="com.sally.user.models" />
+      <recent name="com.sally.domain" />
+      <recent name="com.sally.auth" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/shop-service/src/main/resources/db/migration" />
+      <recent name="$PROJECT_DIR$/api/src/main/java/com/sally/api" />
+      <recent name="$PROJECT_DIR$/api/src/main/java/com/sally/api/requests" />
+      <recent name="$PROJECT_DIR$/api/src/main/java/com/sally/api/commands" />
+      <recent name="$PROJECT_DIR$/api/src/main/java/com/sally/api/query" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.sally.user" />
+      <recent name="com.sally.shop" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sally.shop.controller" />
+      <recent name="com.sally.shop.service" />
+      <recent name="com.sally.user.models" />
+    </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
-    <configuration name="TestDataGeneration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sally.user.TestDataGeneration" />
-      <module name="user-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sally.user.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Docker.docker-compose.yml.shop-service: Compose Deployment">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -174,21 +210,6 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="shop-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.sally.shop.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.sally.shop.service" />
-      <option name="MAIN_CLASS_NAME" value="com.sally.shop.service.ProductServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -273,12 +294,38 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.product-search-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="product-search-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml.ps-elasticksearch: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
               <option value="ps-elasticksearch" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.shop-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="shop-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -299,22 +346,22 @@
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.product-search-service: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.ps-elasticksearch: Compose Deployment" />
-      <item itemvalue="JUnit.ProductServiceTest" />
       <item itemvalue="Maven.Build &amp; Report" />
       <item itemvalue="Remote.User Service Debug" />
       <item itemvalue="Spring Boot.Application" />
       <item itemvalue="Spring Boot.Application (1)" />
       <item itemvalue="Spring Boot.Application (2)" />
       <item itemvalue="Spring Boot.Application (3)" />
-      <item itemvalue="Application.TestDataGeneration" />
+      <item itemvalue="Docker.docker-compose.yml.product-search-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.shop-service: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Application.TestDataGeneration" />
+        <item itemvalue="Docker.docker-compose.yml.shop-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.product-search-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.ps-elasticksearch: Compose Deployment" />
         <item itemvalue="Docker.product-search-service: Compose Deployment" />
-        <item itemvalue="JUnit.ProductServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -353,7 +400,9 @@
       <workItem from="1632993865287" duration="938000" />
       <workItem from="1633521822135" duration="1256000" />
       <workItem from="1634245067614" duration="7846000" />
-      <workItem from="1634302331765" duration="8499000" />
+      <workItem from="1634302331765" duration="10249000" />
+      <workItem from="1634318471156" duration="5660000" />
+      <workItem from="1634377199008" duration="12237000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -411,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634302764514</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="insert test data + fixing bugs">
+      <created>1634311373203</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1634311373203</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +506,8 @@
     <MESSAGE value="shop service fix + tests&#10;gateway: moving config to java code" />
     <MESSAGE value="add product-search-service" />
     <MESSAGE value="integrate product-search service to cluster" />
-    <option name="LAST_COMMIT_MESSAGE" value="integrate product-search service to cluster" />
+    <MESSAGE value="insert test data + fixing bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="insert test data + fixing bugs" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1192" y="254" key="#Docker" timestamp="1634302490635">
@@ -461,10 +518,11 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1076" y="456" key="#Environment_variables/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634301873526" />
-    <state x="-1545" y="106" key="#Project_Structure" timestamp="1634304857675">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="375" y="106" key="#Project_Structure" timestamp="1634404964276">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1545" y="106" key="#Project_Structure/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634304857675" />
+    <state x="375" y="106" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1634404964276" />
     <state x="2055" y="106" key="#Project_Structure/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628169501292" />
     <state x="241" y="358" key="#SQL_Dialects" timestamp="1627466945388">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -475,28 +533,34 @@
     </state>
     <state x="-1557" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634307256529" />
     <state x="343" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627479204618" />
-    <state x="-1174" y="252" key="#com.intellij.ide.util.MemberChooser" timestamp="1634303745953">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="746" y="252" key="#com.intellij.ide.util.MemberChooser" timestamp="1634321379917">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1174" y="252" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634303745953" />
     <state x="653" y="245" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1627475868469" />
+    <state x="746" y="252" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1634321379917" />
     <state x="2426" y="252" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170410213" />
     <state x="578" y="305" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1627464407885">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="305" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627464407885" />
-    <state x="401" y="1" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1627465489569">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="694" y="413" width="531" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1634381716955">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="694" y="413" width="531" height="262" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1080@0.0.1920.1080" timestamp="1634381716955" />
+    <state x="458" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1634318925032">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="401" y="1" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1627465489569" />
+    <state x="458" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1634318925032" />
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate" timestamp="1630938492525">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938492525" />
-    <state x="-1195" y="72" key="CommitChangelistDialog2" timestamp="1634302763987">
+    <state x="-1195" y="72" key="CommitChangelistDialog2" timestamp="1634311372223">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634302763987" />
+    <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634311372223" />
     <state x="125" y="65" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1627483022508" />
     <state x="2405" y="72" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170841639" />
     <state x="-1440" y="66" width="1344" height="840" key="DiffContextDialog" timestamp="1634297413369">
@@ -507,28 +571,28 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1210" y="411" key="Github.CreatePullRequestDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1632302290126" />
-    <state width="1878" height="474" key="GridCell.Tab.0.bottom" timestamp="1634306731536">
+    <state width="1878" height="474" key="GridCell.Tab.0.bottom" timestamp="1634313008509">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="474" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634306731536" />
+    <state width="1878" height="474" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634313008509" />
     <state width="1638" height="203" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1627483043767" />
     <state width="1638" height="203" key="GridCell.Tab.0.bottom/0.25.1680.947@0.25.1680.947" timestamp="1627891708870" />
-    <state width="1878" height="474" key="GridCell.Tab.0.center" timestamp="1634306731535">
+    <state width="1878" height="474" key="GridCell.Tab.0.center" timestamp="1634313008508">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="474" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634306731535" />
+    <state width="1878" height="474" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634313008508" />
     <state width="1638" height="203" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1627483043764" />
     <state width="1638" height="203" key="GridCell.Tab.0.center/0.25.1680.947@0.25.1680.947" timestamp="1627891708868" />
-    <state width="1878" height="474" key="GridCell.Tab.0.left" timestamp="1634306731534">
+    <state width="1878" height="474" key="GridCell.Tab.0.left" timestamp="1634313008507">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="474" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634306731534" />
+    <state width="1878" height="474" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634313008507" />
     <state width="1638" height="203" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1627483043761" />
     <state width="1638" height="203" key="GridCell.Tab.0.left/0.25.1680.947@0.25.1680.947" timestamp="1627891708867" />
-    <state width="1878" height="474" key="GridCell.Tab.0.right" timestamp="1634306731536">
+    <state width="1878" height="474" key="GridCell.Tab.0.right" timestamp="1634313008509">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="474" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634306731536" />
+    <state width="1878" height="474" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634313008509" />
     <state width="1638" height="203" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1627483043765" />
     <state width="1638" height="203" key="GridCell.Tab.0.right/0.25.1680.947@0.25.1680.947" timestamp="1627891708869" />
     <state width="1878" height="517" key="GridCell.Tab.1.bottom" timestamp="1631285754143">
@@ -555,10 +619,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
-    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2" timestamp="1634302766842">
+    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2" timestamp="1634311447834">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634302766842" />
+    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634311447834" />
     <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1627483026863" />
     <state x="2183" y="269" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170843940" />
     <state x="631" y="307" key="chooseDestDirectoryDialog" timestamp="1627464404433">
@@ -582,11 +646,12 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1261" y="295" width="622" height="490" key="find.popup/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634310798039" />
-    <state x="-1539" y="53" width="942" height="820" key="new project wizard" timestamp="1630145470303">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="381" y="53" width="942" height="820" key="new project wizard" timestamp="1634378268994">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1539" y="53" width="942" height="820" key="new project wizard/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630145470303" />
     <state x="246" y="185" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1627456880643" />
+    <state x="381" y="53" key="new project wizard/0.0.1920.1080@0.0.1920.1080" timestamp="1634378268994" />
     <state x="-1343" y="240" width="766" height="696" key="search.everywhere.popup" timestamp="1634310819077">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>

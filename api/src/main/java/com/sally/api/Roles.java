@@ -1,4 +1,4 @@
-package com.sally.auth;
+package com.sally.api;
 
 public class Roles {
     public static final String CUSTOMER = "ROLE_CUSTOMER";

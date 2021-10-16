@@ -1,4 +1,4 @@
-package com.sally.user.models;
+package com.sally.user;
 
 public class UserEndpoints {
     public static final String SERVICE_PREFIX = "/user-service";

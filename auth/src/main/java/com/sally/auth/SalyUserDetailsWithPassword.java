@@ -1,5 +1,6 @@
 package com.sally.auth;
 
+import com.sally.api.UserRole;
 import lombok.Getter;
 
 import java.util.Set;

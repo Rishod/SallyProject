@@ -1,6 +1,7 @@
 package com.sally.auth;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.sally.api.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -31,7 +32,11 @@ public class SalyUserDetails implements UserDetails {
 
     @JsonIgnore
     public List<GrantedAuthority> getAuthorities() {
-        return roles.stream().map(UserRole::asAuthority).collect(Collectors.toList());
+        return roles.stream().map(this::mapUserRole).collect(Collectors.toList());
+    }
+
+    private GrantedAuthority mapUserRole(UserRole userRole) {
+        return new AuthorityImpl(userRole);
     }
 
     @Override

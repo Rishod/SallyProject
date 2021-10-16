@@ -30,6 +30,9 @@
         <jsonwebtoken.version>0.9.1</jsonwebtoken.version>
         <lombock.version>1.18.12</lombock.version>
         <slf4.version>1.7.5</slf4.version>
+        <axon.version>4.5</axon.version>
+        <javax.validation.version>2.0.1.Final</javax.validation.version>
+        <spring.data.elasticksearch.version>4.0.0.RELEASE</spring.data.elasticksearch.version>
     </properties>
 
     <dependencyManagement>
@@ -65,7 +68,7 @@
                 <version>${spring.boot.version}</version>
             </dependency>
 
-            <!--LIBS-->
+            <!--SALLY LIBS-->
             <dependency>
                 <groupId>com.sally</groupId>
                 <artifactId>common-utils</artifactId>
@@ -84,6 +87,13 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.sally</groupId>
+                <artifactId>api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!--OTHER DEPENDENCIES-->
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
@@ -120,6 +130,18 @@
                 <version>${commons-lang3.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${javax.validation.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-elasticsearch</artifactId>
+                <version>${spring.data.elasticksearch.version}</version>
+            </dependency>
+
             <!--Cloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -127,6 +149,19 @@
                 <version>Hoxton.SR10</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!--Axon-->
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-spring-boot-starter</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-modelling</artifactId>
+                <version>${axon.version}</version>
             </dependency>
 
             <!--TESTS-->
@@ -174,6 +209,7 @@
         <module>common-db</module>
         <module>gateway</module>
         <module>product-search-service</module>
+        <module>api</module>
     </modules>
 
     <build>

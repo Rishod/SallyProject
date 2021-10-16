@@ -16,3 +16,6 @@ services:
     container_name: ps-elasticksearch
     environment:
       - "discovery.type=single-node"
+
+  axon-server:
+    image: axoniq/axonserver
