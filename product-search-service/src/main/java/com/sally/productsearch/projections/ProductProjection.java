@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Slf4j
 @Service
@@ -31,7 +30,7 @@ public class ProductProjection {
         log.info("Handle ProductCreatedEvent (productId: {}, shopId: {})", event.getProductId(), event.getShopId());
 
         final ProductEntity productEntity = ProductEntity.builder()
-                .id(event.getProductId().toString())
+                .id(event.getProductId())
                 .title(event.getName())
                 .description(event.getDescription())
                 .build();
@@ -44,9 +43,11 @@ public class ProductProjection {
         log.info("Handle ProductUpdatedEvent (productId: {}, shopId: {})", event.getProductId(), event.getShopId());
 
         final ProductEntity productEntity = ProductEntity.builder()
-                .id(event.getProductId().toString())
+                .id(event.getProductId())
                 .title(event.getName())
                 .description(event.getDescription())
+                .price(event.getPrice())
+                .shopId(event.getShopId())
                 .build();
 
         productRepository.save(productEntity);
@@ -74,10 +75,10 @@ public class ProductProjection {
 
     private Product mapProduct(ProductEntity entity) {
         return Product.builder()
-                .id(UUID.fromString(entity.getId()))
+                .id(entity.getId())
                 .name(entity.getTitle())
                 .description(entity.getDescription())
-                .price(null)
+                .price(entity.getPrice())
                 .build();
     }
 }

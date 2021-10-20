@@ -60,6 +60,13 @@ public class ProductDAOImpl extends CommonDAO implements ProductDAO {
     }
 
     @Override
+    public Optional<ProductEntity> getProductByIdAndShopId(UUID productId, UUID shopId) {
+        return findSingleResult(entityManager.createQuery("select p from ProductEntity p where p.id = :id and p.shopId = :shopId", ProductEntity.class)
+                .setParameter("id", productId)
+                .setParameter("shopId", shopId));
+    }
+
+    @Override
     public List<ProductEntity> getAllProducts() {
         return entityManager.createQuery("select p from ProductEntity p", ProductEntity.class).getResultList();
     }

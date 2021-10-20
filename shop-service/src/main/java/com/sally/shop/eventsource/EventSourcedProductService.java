@@ -10,7 +10,11 @@ import com.sally.api.query.GetProductByIdQuery;
 import com.sally.api.requests.CreateProductRequest;
 import com.sally.api.requests.UpdateProductRequest;
 import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.axonframework.eventsourcing.EventSourcedAggregate;
+import org.axonframework.eventsourcing.EventSourcingRepository;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
+import org.axonframework.modelling.command.LockAwareAggregate;
+import org.axonframework.modelling.command.Repository;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.stereotype.Service;
 
@@ -36,6 +40,7 @@ public class EventSourcedProductService  {
         final UUID productId = UUID.randomUUID();
         final CreateProductCommand createProductCommand = CreateProductCommand.builder()
                 .productId(productId)
+                .shopId(shopId)
                 .name(request.getName())
                 .description(request.getDescription())
                 .price(request.getPrice())

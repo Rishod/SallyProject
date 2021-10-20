@@ -8,6 +8,8 @@ import com.sally.api.Product;
 import com.sally.api.requests.CreateProductRequest;
 import com.sally.shop.dao.ProductDAO;
 import com.sally.shop.dao.entity.ProductEntity;
+import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -15,6 +17,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
+import java.util.Optional;
 import java.util.UUID;
 
 @ExtendWith({MockitoExtension.class})
@@ -24,6 +27,8 @@ class ProductServiceImplTest {
     private ProductServiceImpl productService;
     @Mock
     private ProductDAO productDAO;
+    @Mock
+    private CommandGateway commandGateway;
 
     @Test
     void testSaveProduct() {
@@ -55,6 +60,11 @@ class ProductServiceImplTest {
         final UUID shopId = UUID.randomUUID();
         UUID productId = UUID.randomUUID();
 
+        final ProductEntity productEntity = new ProductEntity();
+        productEntity.setId(productId);
+        productEntity.setShopId(shopId);
+
+        when(productDAO.getProductByIdAndShopId(productId, shopId)).thenReturn(Optional.of(productEntity));
         productService.deleteProduct(shopId, productId);
 
         verify(productDAO).delete(shopId, productId);

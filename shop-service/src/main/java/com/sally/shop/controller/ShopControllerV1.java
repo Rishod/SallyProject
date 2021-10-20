@@ -8,7 +8,7 @@ import com.sally.api.Product;
 import com.sally.api.requests.CreateProductRequest;
 import com.sally.api.requests.UpdateProductRequest;
 import com.sally.auth.SalyUserDetails;
-import com.sally.shop.service.ProductServiceImpl;
+import com.sally.shop.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -29,9 +29,9 @@ import java.util.UUID;
 @RequestMapping(V1)
 public class ShopControllerV1 {
 
-    private ProductServiceImpl productService;
+    private ProductService productService;
 
-    public ShopControllerV1(ProductServiceImpl productService) {
+    public ShopControllerV1(ProductService productService) {
         this.productService = productService;
     }
 

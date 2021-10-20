@@ -15,6 +15,8 @@ public interface ProductDAO {
 
     Optional<ProductEntity> getProductById(UUID productId);
 
+    Optional<ProductEntity> getProductByIdAndShopId(UUID productId, UUID shopId);
+
     List<ProductEntity> getAllProducts();
 
     void delete(UUID shopId, UUID productId);

@@ -1,6 +1,9 @@
 package com.sally.shop.service;
 
 import com.sally.api.Product;
+import com.sally.api.commands.CreateProductCommand;
+import com.sally.api.commands.DeleteProductCommand;
+import com.sally.api.commands.UpdateProductCommand;
 import com.sally.api.requests.CreateProductRequest;
 import com.sally.api.requests.UpdateProductRequest;
 import com.sally.exceptions.ErrorCode;
@@ -8,6 +11,7 @@ import com.sally.exceptions.NotFoundException;
 import com.sally.shop.dao.entity.ProductEntity;
 import com.sally.shop.dao.ProductDAO;
 import lombok.extern.slf4j.Slf4j;
+import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,9 +23,11 @@ import java.util.stream.Collectors;
 @Service
 public class ProductServiceImpl implements ProductService {
     private final ProductDAO productDAO;
+    private final CommandGateway commandGateway;
 
-    public ProductServiceImpl(ProductDAO productDAO) {
+    public ProductServiceImpl(ProductDAO productDAO, CommandGateway commandGateway) {
         this.productDAO = productDAO;
+        this.commandGateway = commandGateway;
     }
 
     @Override
@@ -29,6 +35,16 @@ public class ProductServiceImpl implements ProductService {
     public Product saveProduct(final UUID shopId, final CreateProductRequest request) {
         final ProductEntity productEntity = productDAO.saveProduct(shopId, request.getName(), request.getDescription(),
                 request.getPrice());
+
+        final CreateProductCommand createProductCommand = CreateProductCommand.builder()
+                .productId(productEntity.getId())
+                .shopId(productEntity.getShopId())
+                .name(productEntity.getName())
+                .description(productEntity.getDescription())
+                .price(productEntity.getPrice())
+                .build();
+
+        commandGateway.sendAndWait(createProductCommand);
 
         return mapProduct(productEntity);
     }
@@ -48,6 +64,16 @@ public class ProductServiceImpl implements ProductService {
     public Product updateProduct(final UUID shopId, final UpdateProductRequest request) {
         final ProductEntity productEntity = productDAO.updateProduct(request.getId(), shopId, request.getName(),
                 request.getDescription(), request.getPrice());
+
+        final UpdateProductCommand updateProductCommand = UpdateProductCommand.builder()
+                .productId(productEntity.getId())
+                .shopId(productEntity.getShopId())
+                .name(productEntity.getName())
+                .description(productEntity.getDescription())
+                .price(productEntity.getPrice())
+                .build();
+
+        commandGateway.sendAndWait(updateProductCommand);
 
         return mapProduct(productEntity);
     }
@@ -72,6 +98,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @Transactional
     public void deleteProduct(UUID shopId, UUID productId) {
-        productDAO.delete(shopId, productId);
+        productDAO.getProductByIdAndShopId(productId, shopId).ifPresent(product -> {
+            productDAO.delete(shopId, productId);
+            commandGateway.sendAndWait(new DeleteProductCommand(productId, shopId));
+        });
+
     }
 }

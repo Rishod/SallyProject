@@ -210,6 +210,7 @@
         <module>gateway</module>
         <module>product-search-service</module>
         <module>api</module>
+        <module>order-service</module>
     </modules>
 
     <build>
