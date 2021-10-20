@@ -89,6 +89,11 @@ services:
       - sally-product-search-service-network
   #######
 
+  ### Order Service
+  order-service:
+
+  #################
+
   ### Axon Server ###
   axon-server:
     image: axoniq/axonserver

@@ -1,19 +1,18 @@
-package com.sally.api.events;
+package com.sally.api.commands;
 
 import com.sally.api.OrderItem;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
+import java.util.UUID;
 
 @Data
-@Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class OrderCreatedEvent {
-    private String orderId;
-    private String customerId;
+@NoArgsConstructor
+public class CreateShippingCommand {
+    private UUID orderId;
+    private UUID customerId;
     private List<OrderItem> orderItems;
 }

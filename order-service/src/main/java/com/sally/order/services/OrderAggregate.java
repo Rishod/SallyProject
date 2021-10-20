@@ -38,8 +38,8 @@ public class OrderAggregate {
     @CommandHandler
     public OrderAggregate(final CreateOrderCommand command) {
         final OrderCreatedEvent event = OrderCreatedEvent.builder()
-                .orderId(command.getOrderId())
-                .customerId(command.getCustomerId())
+                .orderId(command.getOrderId().toString())
+                .customerId(command.getCustomerId().toString())
                 .orderItems(OrderItem.ofCommandItem(command.getItems()))
                 .build();
 
@@ -65,13 +65,13 @@ public class OrderAggregate {
 
     @CommandHandler
     public void on(final CancelOrderCommand command) {
-        AggregateLifecycle.apply(new OrderCanceledEvent(command.getOrderId(), command.getCustomerId()));
+        AggregateLifecycle.apply(new OrderCanceledEvent(command.getOrderId().toString(), command.getCustomerId().toString()));
     }
 
     @EventSourcingHandler
     public void on(OrderCreatedEvent event) {
-        this.customerId = event.getCustomerId();
-        this.orderId = event.getOrderId();
+        this.customerId = UUID.fromString(event.getCustomerId());
+        this.orderId = UUID.fromString(event.getOrderId());
         this.orderItems = event.getOrderItems();
         this.orderStatus = OrderStatus.VERIFYING;
     }
@@ -89,7 +89,7 @@ public class OrderAggregate {
 
     @EventSourcingHandler
     public void on(final OrderCanceledEvent event) {
-        this.orderStatus = OrderStatus.PLACED;
+        this.orderStatus = OrderStatus.CANCELED_BY_CUSTOMER;
     }
 
 }
