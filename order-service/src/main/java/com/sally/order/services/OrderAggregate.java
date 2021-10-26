@@ -27,6 +27,7 @@ public class OrderAggregate {
     @AggregateIdentifier
     private UUID orderId;
     private UUID customerId;
+    private String customerName;
     private List<OrderItem> orderItems;
     private BigDecimal total;
     private OrderStatus orderStatus;
@@ -40,7 +41,9 @@ public class OrderAggregate {
         final OrderCreatedEvent event = OrderCreatedEvent.builder()
                 .orderId(command.getOrderId().toString())
                 .customerId(command.getCustomerId().toString())
+                .customerName(command.getCustomerName())
                 .orderItems(OrderItem.ofCommandItem(command.getItems()))
+                .status(OrderStatus.VERIFYING)
                 .build();
 
         AggregateLifecycle.apply(event);
@@ -73,7 +76,7 @@ public class OrderAggregate {
         this.customerId = UUID.fromString(event.getCustomerId());
         this.orderId = UUID.fromString(event.getOrderId());
         this.orderItems = event.getOrderItems();
-        this.orderStatus = OrderStatus.VERIFYING;
+        this.orderStatus = event.getStatus();
     }
 
     @EventSourcingHandler

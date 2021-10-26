@@ -22,6 +22,7 @@ public class CreateOrderCommand {
     @TargetAggregateIdentifier
     private UUID orderId;
     private UUID customerId;
+    private String customerName;
     private List<Item> items;
 
     @Data

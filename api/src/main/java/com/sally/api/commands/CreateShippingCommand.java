@@ -14,5 +14,7 @@ import java.util.UUID;
 public class CreateShippingCommand {
     private UUID orderId;
     private UUID customerId;
+    private UUID shopId;
+    private String customerName;
     private List<OrderItem> orderItems;
 }

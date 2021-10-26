@@ -28,6 +28,9 @@ public class OrderSaga {
     public static final String CUSTOMER_ID_ASSOCIATION_KEY = "customerId";
 
     private UUID customerId;
+    private String customerName;
+    private OrderStatus orderStatus;
+    private UUID shopId;
 
     @Autowired
     private transient CommandGateway commandGateway;
@@ -39,6 +42,8 @@ public class OrderSaga {
         SagaLifecycle.associateWith(CUSTOMER_ID_ASSOCIATION_KEY, event.getCustomerId());
 
         this.customerId = UUID.fromString(event.getCustomerId());
+        this.customerName = event.getCustomerName();
+        this.orderStatus = event.getStatus();
 
         final VerifyProductsCommand verifyProductsCommand = VerifyProductsCommand.builder()
                 .orderId(UUID.fromString(event.getOrderId()))
@@ -51,7 +56,9 @@ public class OrderSaga {
     @SagaEventHandler(associationProperty = ORDER_ID_ASSOCIATION_KEY)
     public void on(final ProductsVerificationFailedEvent event) {
         log.info("Handle ProductsVerificationFailedEvent OrderSaga (orderId: {})", event.getOrderId());
-        commandGateway.sendAndWait(new UpdateOrderStatusCommand(UUID.fromString(event.getOrderId()), OrderStatus.VERIFICATION_FAILED));
+        this.orderStatus = OrderStatus.VERIFICATION_FAILED;
+
+        commandGateway.sendAndWait(new UpdateOrderStatusCommand(UUID.fromString(event.getOrderId()), this.orderStatus));
 
         SagaLifecycle.end();
     }
@@ -60,10 +67,11 @@ public class OrderSaga {
     public void on(final ProductsVerificationSuccessEvent event) {
         log.info("Handle ProductsVerificationSuccessEvent (orderId: {})", event.getOrderId());
         final UUID orderId = UUID.fromString(event.getOrderId());
+        this.shopId = event.getShopId();
 
         commandGateway.send(new UpdateOrderItemsCommand(orderId, event.getVerifiedProducts(), event.getTotal()))
                 .thenCompose(result -> commandGateway.send(new UpdateOrderStatusCommand(orderId, OrderStatus.SHIPPING)))
-                .thenCompose(result -> commandGateway.send(new CreateShippingCommand(orderId, customerId, event.getVerifiedProducts())));
+                .thenCompose(result -> commandGateway.send(new CreateShippingCommand(shopId, orderId, customerId, customerName, event.getVerifiedProducts())));
     }
 
     @SagaEventHandler(associationProperty = ORDER_ID_ASSOCIATION_KEY)
