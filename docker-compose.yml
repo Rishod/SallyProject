@@ -91,14 +91,35 @@ services:
 
   ### Order Service
   order-service:
+     build:
+       context: order-service
+     ports:
+      - "7005:5005"
+     depends_on:
+       - order-service-postgres
+       - axon-server
+     command: java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar ./order-service.jar
+     networks:
+       - sally-gateway-network
+       - sally-order-service-network
 
+  order-service-postgres:
+    image: postgres:12.0-alpine
+    environment:
+      POSTGRES_DB: order-service-db
+      POSTGRES_USER: order-service
+      POSTGRES_PASSWORD: root
+    networks:
+      - sally-order-service-network
   #################
 
   ### Axon Server ###
   axon-server:
     image: axoniq/axonserver
     networks:
-      - sally-shop-service-network
+#      - sally-shop-service-network
+#      - sally-product-search-service-network
+#      - sally-order-service-network
       - sally-gateway-network
   ###################
 
@@ -108,3 +129,4 @@ networks:
   sally-user-service-network:
   sally-shop-service-network:
   sally-product-search-service-network:
+  sally-order-service-network:

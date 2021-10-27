@@ -6,6 +6,7 @@ import com.sally.api.commands.DeleteProductCommand;
 import com.sally.api.commands.UpdateProductCommand;
 import com.sally.api.requests.CreateProductRequest;
 import com.sally.api.requests.UpdateProductRequest;
+import com.sally.auth.ShopDetails;
 import com.sally.exceptions.ErrorCode;
 import com.sally.exceptions.NotFoundException;
 import com.sally.shop.dao.entity.ProductEntity;
@@ -33,13 +34,14 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public Product saveProduct(final UUID shopId, final CreateProductRequest request) {
-        final ProductEntity productEntity = productDAO.saveProduct(shopId, request.getName(), request.getDescription(),
+    public Product saveProduct(final ShopDetails shop, final CreateProductRequest request) {
+        final ProductEntity productEntity = productDAO.saveProduct(shop.getId(), request.getName(), request.getDescription(),
                 request.getPrice());
 
         final CreateProductCommand createProductCommand = CreateProductCommand.builder()
                 .productId(productEntity.getId())
                 .shopId(productEntity.getShopId())
+                .shopName(shop.getName())
                 .name(productEntity.getName())
                 .description(productEntity.getDescription())
                 .price(productEntity.getPrice())
@@ -62,13 +64,14 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public Product updateProduct(final UUID shopId, final UpdateProductRequest request) {
-        final ProductEntity productEntity = productDAO.updateProduct(request.getId(), shopId, request.getName(),
+    public Product updateProduct(final ShopDetails shop, final UpdateProductRequest request) {
+        final ProductEntity productEntity = productDAO.updateProduct(request.getId(), shop.getId(), request.getName(),
                 request.getDescription(), request.getPrice());
 
         final UpdateProductCommand updateProductCommand = UpdateProductCommand.builder()
                 .productId(productEntity.getId())
                 .shopId(productEntity.getShopId())
+                .shopName(shop.getName())
                 .name(productEntity.getName())
                 .description(productEntity.getDescription())
                 .price(productEntity.getPrice())

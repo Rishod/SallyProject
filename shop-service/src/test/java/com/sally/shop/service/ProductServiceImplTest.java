@@ -6,6 +6,7 @@ import static org.mockito.Mockito.when;
 
 import com.sally.api.Product;
 import com.sally.api.requests.CreateProductRequest;
+import com.sally.auth.ShopDetails;
 import com.sally.shop.dao.ProductDAO;
 import com.sally.shop.dao.entity.ProductEntity;
 import org.axonframework.commandhandling.gateway.CommandGateway;
@@ -33,9 +34,14 @@ class ProductServiceImplTest {
     @Test
     void testSaveProduct() {
         final UUID shopId = UUID.randomUUID();
+        final String shopName = "shopName";
         String name = "name";
         String description = "desc";
         BigDecimal price = new BigDecimal("12.34");
+
+        final ShopDetails shopDetails = new ShopDetails();
+        shopDetails.setId(shopId);
+        shopDetails.setName(shopName);
 
         final CreateProductRequest createProductRequest = CreateProductRequest.builder()
                 .name(name)
@@ -50,7 +56,7 @@ class ProductServiceImplTest {
                 .thenReturn(productEntity);
 
 
-        final Product result = productService.saveProduct(shopId, createProductRequest);
+        final Product result = productService.saveProduct(shopDetails, createProductRequest);
 
         assertThat(result.getId()).isEqualTo(productEntity.getId());
     }

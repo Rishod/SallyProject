@@ -30,6 +30,7 @@ public class ProductAggregate {
     private String description;
     private BigDecimal price;
     private UUID shopId;
+    private String shopName;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -44,6 +45,7 @@ public class ProductAggregate {
         final ProductCreatedEvent event = ProductCreatedEvent.builder()
                 .productId(command.getProductId())
                 .shopId(command.getShopId())
+                .shopName(command.getShopName())
                 .name(command.getName())
                 .description(command.getDescription())
                 .price(command.getPrice())

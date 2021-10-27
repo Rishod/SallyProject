@@ -33,6 +33,9 @@ public class ProductProjection {
                 .id(event.getProductId())
                 .title(event.getName())
                 .description(event.getDescription())
+                .shopId(event.getShopId())
+                .shopName(event.getShopName())
+                .price(event.getPrice())
                 .build();
 
         productRepository.save(productEntity);
@@ -48,6 +51,7 @@ public class ProductProjection {
                 .description(event.getDescription())
                 .price(event.getPrice())
                 .shopId(event.getShopId())
+                .shopName(event.getShopName())
                 .build();
 
         productRepository.save(productEntity);

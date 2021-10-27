@@ -8,11 +8,7 @@ import com.sally.api.commands.CancelOrderCommand;
 import com.sally.api.commands.CreateOrderCommand;
 import com.sally.api.requests.CreateOrderRequest;
 import com.sally.auth.SalyUserDetails;
-import com.sally.order.services.OrderAggregate;
-import com.sally.order.services.OrderSaga;
 import org.axonframework.commandhandling.gateway.CommandGateway;
-import org.axonframework.eventsourcing.EventSourcingRepository;
-import org.axonframework.modelling.saga.repository.AnnotatedSagaRepository;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,15 +24,9 @@ import java.util.concurrent.CompletableFuture;
 public class OrderControllerV1 {
 
     private final CommandGateway commandGateway;
-    private final AnnotatedSagaRepository<OrderSaga> orderSagaRepository;
-    private final EventSourcingRepository<OrderAggregate> orderAggregateRepository;
 
-    public OrderControllerV1(CommandGateway commandGateway,
-                             AnnotatedSagaRepository<OrderSaga> orderSagaRepository,
-                             EventSourcingRepository<OrderAggregate> orderAggregateRepository) {
+    public OrderControllerV1(CommandGateway commandGateway) {
         this.commandGateway = commandGateway;
-        this.orderSagaRepository = orderSagaRepository;
-        this.orderAggregateRepository = orderAggregateRepository;
     }
 
     @PostMapping(ORDER)

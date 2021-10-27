@@ -20,4 +20,5 @@ public class UpdateProductCommand {
     private String description;
     private BigDecimal price;
     private UUID shopId;
+    private String shopName;
 }

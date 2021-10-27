@@ -21,4 +21,5 @@ public class ProductUpdatedEvent {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private UUID shopId;
+    private String shopName;
 }

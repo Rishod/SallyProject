@@ -20,4 +20,5 @@ public class ProductCreatedEvent {
     private BigDecimal price;
     private LocalDateTime createdAt;
     private UUID shopId;
+    private String shopName;
 }

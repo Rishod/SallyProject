@@ -20,4 +20,5 @@ public class CreateProductCommand {
     private String description;
     private BigDecimal price;
     private UUID shopId;
+    private String shopName;
 }

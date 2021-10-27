@@ -39,15 +39,13 @@ public class ShopControllerV1 {
     @PreAuthorize("hasRole('ROLE_SHOP_OWNER')")
     public Product createProduct(@RequestBody CreateProductRequest request,
                                  @AuthenticationPrincipal final SalyUserDetails userDetails) {
-        final UUID shopId = userDetails.getShopDetails().getId();
-        return productService.saveProduct(shopId, request);
+        return productService.saveProduct(userDetails.getShopDetails(), request);
     }
 
     @PutMapping(PRODUCT)
     @PreAuthorize("hasRole('ROLE_SHOP_OWNER')")
     public Product editProduct(@RequestBody UpdateProductRequest request, @AuthenticationPrincipal SalyUserDetails userDetails) {
-        final UUID shopId = userDetails.getShopDetails().getId();
-        return productService.updateProduct(shopId, request);
+        return productService.updateProduct(userDetails.getShopDetails(), request);
     }
 
     @DeleteMapping(PRODUCT_BY_ID)
