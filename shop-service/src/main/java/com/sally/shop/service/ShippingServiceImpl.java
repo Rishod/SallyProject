@@ -4,9 +4,12 @@ import com.sally.api.OrderItem;
 import com.sally.api.Shipping;
 import com.sally.api.ShippingItem;
 import com.sally.api.ShippingStatus;
+import com.sally.api.events.OrderShippedEvent;
+import com.sally.api.events.OrderShippingCanceledEvent;
 import com.sally.shop.dao.ShippingDAO;
 import com.sally.shop.dao.entity.ShippingEntity;
 import com.sally.shop.dao.entity.ShippingItemEntity;
+import org.axonframework.eventhandling.gateway.EventGateway;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,9 +21,11 @@ import java.util.stream.Collectors;
 public class ShippingServiceImpl implements ShippingService {
 
     private final ShippingDAO shippingDAO;
+    private final EventGateway eventGateway;
 
-    public ShippingServiceImpl(ShippingDAO shippingDAO) {
+    public ShippingServiceImpl(ShippingDAO shippingDAO, EventGateway eventGateway) {
         this.shippingDAO = shippingDAO;
+        this.eventGateway = eventGateway;
     }
 
     @Override
@@ -32,13 +37,17 @@ public class ShippingServiceImpl implements ShippingService {
     @Override
     @Transactional
     public void deliverShipping(UUID shopId, UUID shippingId) {
-        shippingDAO.updateStatus(shopId, shippingId, ShippingStatus.DELIVERED);
+        final ShippingEntity shippingEntity = shippingDAO.updateStatus(shopId, shippingId, ShippingStatus.DELIVERED);
+
+        eventGateway.publish(new OrderShippedEvent(shippingEntity.getOrderId().toString()));
     }
 
     @Override
     @Transactional
     public void deniedShipping(UUID shopId, UUID shippingId) {
-        shippingDAO.updateStatus(shopId, shippingId, ShippingStatus.CANCELED);
+        final ShippingEntity shippingEntity = shippingDAO.updateStatus(shopId, shippingId, ShippingStatus.CANCELED);
+
+        eventGateway.publish(new OrderShippingCanceledEvent(shippingEntity.getOrderId().toString()));
     }
 
     @Override

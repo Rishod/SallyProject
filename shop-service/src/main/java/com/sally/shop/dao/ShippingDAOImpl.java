@@ -37,12 +37,14 @@ public class ShippingDAOImpl extends CommonDAO implements ShippingDAO {
     }
 
     @Override
-    public void updateStatus(final UUID shopId, final UUID shippingId, ShippingStatus status) {
+    public ShippingEntity updateStatus(final UUID shopId, final UUID shippingId, ShippingStatus status) {
         final ShippingEntity shippingEntity = findByIdAndShop(shopId, shippingId)
                 .orElseThrow(() -> new NotFoundException(ErrorCode.PRODUCT_NOT_FOUND_BY_ID));
 
         shippingEntity.setStatus(status);
         this.entityManager.merge(shippingEntity);
+
+        return shippingEntity;
     }
 
     @Override

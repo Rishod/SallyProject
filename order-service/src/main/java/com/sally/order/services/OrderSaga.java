@@ -65,13 +65,13 @@ public class OrderSaga {
 
     @SagaEventHandler(associationProperty = ORDER_ID_ASSOCIATION_KEY)
     public void on(final ProductsVerificationSuccessEvent event) {
-        log.info("Handle ProductsVerificationSuccessEvent (orderId: {})", event.getOrderId());
+        log.info("Handle ProductsVerificationSuccessEvent [orderId: {}, shopId: {}]", event.getOrderId(), event.getShopId());
         final UUID orderId = UUID.fromString(event.getOrderId());
         this.shopId = event.getShopId();
 
         commandGateway.send(new UpdateOrderItemsCommand(orderId, event.getVerifiedProducts(), event.getTotal()))
                 .thenCompose(result -> commandGateway.send(new UpdateOrderStatusCommand(orderId, OrderStatus.SHIPPING)))
-                .thenCompose(result -> commandGateway.send(new CreateShippingCommand(shopId, orderId, customerId, customerName, event.getVerifiedProducts())));
+                .thenCompose(result -> commandGateway.send(new CreateShippingCommand(orderId, customerId, shopId, customerName, event.getVerifiedProducts())));
     }
 
     @SagaEventHandler(associationProperty = ORDER_ID_ASSOCIATION_KEY)

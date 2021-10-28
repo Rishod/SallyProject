@@ -11,7 +11,7 @@ import java.util.UUID;
 public interface ShippingDAO {
     void saveShipping(UUID shopId, UUID orderId, UUID customerId, String customerName, List<OrderItem> orderItems);
 
-    void updateStatus(UUID shopId, UUID shippingId, ShippingStatus delivered);
+    ShippingEntity updateStatus(UUID shopId, UUID shippingId, ShippingStatus delivered);
 
     List<ShippingEntity> getAllForShop(UUID shopId);
 

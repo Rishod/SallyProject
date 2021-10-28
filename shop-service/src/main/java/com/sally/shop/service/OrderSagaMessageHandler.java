@@ -7,19 +7,18 @@ import com.sally.api.events.ProductsVerificationFailedEvent;
 import com.sally.api.events.ProductsVerificationSuccessEvent;
 import com.sally.shop.dao.ProductDAO;
 import com.sally.shop.dao.entity.ProductEntity;
+import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventhandling.gateway.EventGateway;
-import org.axonframework.messaging.unitofwork.UnitOfWork;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 public class OrderSagaMessageHandler {
     private final ProductDAO productDAO;
@@ -35,6 +34,8 @@ public class OrderSagaMessageHandler {
     @Transactional
     @CommandHandler
     public void on(final VerifyProductsCommand command) {
+        log.info("Handle VerifyProductsCommand [orderId: {}]", command.getOrderId());
+
         try {
             BigDecimal total = new BigDecimal("0.00");
             final List<OrderItem> items = new ArrayList<>();
@@ -71,6 +72,8 @@ public class OrderSagaMessageHandler {
 
     @CommandHandler
     public void on(final CreateShippingCommand command) {
+        log.info("Handle CreateShippingCommand [orderId: {}, shopId: {}]", command.getOrderId(), command.getShopId());
+
         shippingService.createShipping(command.getShopId(), command.getOrderId(), command.getCustomerId(),
                 command.getCustomerName(), command.getOrderItems());
     }
