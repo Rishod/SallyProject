@@ -1,7 +1,7 @@
 package com.sally.productsearch.controllers;
 
-import static com.sally.productsearch.controllers.ProductSearchEndpoints.PRODUCTS;
-import static com.sally.productsearch.controllers.ProductSearchEndpoints.V1;
+import static com.sally.productsearch.ProductSearchEndpoints.PRODUCTS;
+import static com.sally.productsearch.ProductSearchEndpoints.V1;
 
 import com.sally.productsearch.entities.ProductEntity;
 import com.sally.productsearch.repositories.ProductRepository;

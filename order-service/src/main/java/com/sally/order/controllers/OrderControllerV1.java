@@ -52,6 +52,4 @@ public class OrderControllerV1 {
 
         return commandGateway.send(command);
     }
-
-
 }

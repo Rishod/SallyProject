@@ -8,7 +8,7 @@ import com.sally.api.Product;
 import com.sally.api.requests.CreateProductRequest;
 import com.sally.api.requests.UpdateProductRequest;
 import com.sally.auth.SalyUserDetails;
-import com.sally.shop.eventsource.EventSourcedProductService;
+import com.sally.shop.service.EventSourcedProductService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

@@ -6,4 +6,9 @@ public class OrderServiceEndpoints {
     public static final String ORDER = "/order";
     public static final String ORDER_CANCEL = ORDER + "/cancel";
 
+
+    public static final String SAGA = ORDER + "/saga";
+    public static final String AGGREGATE_BY_ID = ORDER + "/aggregate/{id}";
+    public static final String AGGREGATE_EVENTS_BY_ID = AGGREGATE_BY_ID + "/events";
+
 }

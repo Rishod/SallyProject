@@ -1,4 +1,4 @@
-package com.sally.shop.eventsource;
+package com.sally.shop.service;
 
 import com.sally.api.Product;
 import com.sally.api.commands.CreateProductCommand;

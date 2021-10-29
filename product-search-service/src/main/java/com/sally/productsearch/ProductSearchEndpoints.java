@@ -1,4 +1,4 @@
-package com.sally.productsearch.controllers;
+package com.sally.productsearch;
 
 public class ProductSearchEndpoints {
     public static final String SERVICE_PREFIX = "/product-search-service";
