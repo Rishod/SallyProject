@@ -7,8 +7,11 @@ import org.springframework.data.elasticsearch.annotations.Query;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.UUID;
+
 @Repository
-public interface ProductRepository extends ElasticsearchRepository<ProductEntity, String> {
+public interface ProductRepository extends ElasticsearchRepository<ProductEntity, UUID> {
     Page<ProductEntity> findByTitle(String title, Pageable pageable);
 
     @Query("{\n" +
@@ -18,4 +21,7 @@ public interface ProductRepository extends ElasticsearchRepository<ProductEntity
             "    }\n" +
             "  }")
     Page<ProductEntity> defaultSearch(final String searchText, Pageable pageable);
+
+    List<ProductEntity> findByIdIn(final List<UUID> ids);
+
 }

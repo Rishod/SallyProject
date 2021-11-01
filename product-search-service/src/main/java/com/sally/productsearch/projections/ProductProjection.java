@@ -1,9 +1,11 @@
 package com.sally.productsearch.projections;
 
 import com.sally.api.Product;
+import com.sally.api.SearchedProducts;
 import com.sally.api.events.ProductCreatedEvent;
 import com.sally.api.events.ProductDeletedEvent;
 import com.sally.api.events.ProductUpdatedEvent;
+import com.sally.api.query.FindProductsByIdsQuery;
 import com.sally.api.query.GetAllProductsQuery;
 import com.sally.api.query.GetProductByIdQuery;
 import com.sally.productsearch.entities.ProductEntity;
@@ -15,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -61,7 +64,7 @@ public class ProductProjection {
     public void on(final ProductDeletedEvent event) {
         log.info("Handle ProductDeletedEvent (productId: {}, shopId: {})", event.getProductId(), event.getShopId());
 
-        productRepository.findById(event.getProductId().toString()).ifPresent(productRepository::delete);
+        productRepository.findById(event.getProductId()).ifPresent(productRepository::delete);
     }
 
     @QueryHandler
@@ -74,7 +77,15 @@ public class ProductProjection {
 
     @QueryHandler
     public Product query(final GetProductByIdQuery query) {
-        return productRepository.findById(query.getProductId().toString()).map(this::mapProduct).orElse(null);
+        return productRepository.findById(query.getProductId()).map(this::mapProduct).orElse(null);
+    }
+
+    @QueryHandler
+    public SearchedProducts query(final FindProductsByIdsQuery query) {
+        return new SearchedProducts(productRepository.findByIdIn(query.getProductIds())
+                .stream()
+                .map(this::mapProduct)
+                .collect(Collectors.toList()));
     }
 
     private Product mapProduct(ProductEntity entity) {
