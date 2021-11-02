@@ -61,6 +61,7 @@ public class OrderServiceImpl implements OrderService {
 
     private Order toOrder(OrderEntity orderEntity) {
         return Order.builder()
+                .id(orderEntity.getId())
                 .customerId(orderEntity.getCustomerId())
                 .total(orderEntity.getTotal())
                 .status(orderEntity.getStatus())

@@ -28,7 +28,7 @@ public class OrderDAOImpl extends CommonDAO implements OrderDAO {
 
     @Override
     public List<OrderItemEntity> getOrderItems(UUID orderId) {
-        return this.entityManager.createQuery("select i from OrderItemEntity i where i.orderEntity.id = :orderId", OrderItemEntity.class)
+        return this.entityManager.createQuery("select i from OrderItemEntity i where i.order.id = :orderId", OrderItemEntity.class)
                 .setParameter("orderId", orderId)
                 .getResultList();
     }
@@ -81,6 +81,8 @@ public class OrderDAOImpl extends CommonDAO implements OrderDAO {
     }
 
     private void updateItems(OrderEntity order, List<OrderItem> items) {
+        getOrderItems(order.getId()).forEach(entityManager::remove);
+
         items.stream()
                 .map(item -> buildOrderItemEntity(order, item))
                 .forEach(this.entityManager::merge);
