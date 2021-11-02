@@ -1,4 +1,4 @@
-package com.sally.shop.service;
+package com.sally.shop.axon;
 
 import com.sally.api.commands.CreateProductCommand;
 import com.sally.api.commands.DeleteProductCommand;

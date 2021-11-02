@@ -32,6 +32,21 @@ public class ProductDAOImpl extends CommonDAO implements ProductDAO {
         return entity;
     }
 
+    @Override
+    public ProductEntity saveProduct(UUID id, UUID shopId, String name, String description, BigDecimal price) {
+        final ProductEntity entity = ProductEntity.builder()
+                .name(name)
+                .description(description)
+                .price(price)
+                .shopId(shopId)
+                .build();
+
+        entity.setId(id);
+        entityManager.persist(entity);
+
+        return entity;
+    }
+
     public Optional<ProductEntity> findProductByIdAndShop(UUID id, UUID shopId) {
         return findSingleResult(entityManager.createQuery("select p from ProductEntity p where p.id = :id" +
                 " and p.shopId = :shopId", ProductEntity.class)

@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 @Slf4j
 @RestController
@@ -37,14 +38,14 @@ public class ShopControllerV1 {
 
     @PostMapping(PRODUCT)
     @PreAuthorize("hasRole('ROLE_SHOP_OWNER')")
-    public Product createProduct(@RequestBody CreateProductRequest request,
-                                 @AuthenticationPrincipal final SalyUserDetails userDetails) {
+    public CompletableFuture<Product> createProduct(@RequestBody CreateProductRequest request,
+                                                    @AuthenticationPrincipal final SalyUserDetails userDetails) {
         return productService.saveProduct(userDetails.getShopDetails(), request);
     }
 
     @PutMapping(PRODUCT)
     @PreAuthorize("hasRole('ROLE_SHOP_OWNER')")
-    public Product editProduct(@RequestBody UpdateProductRequest request, @AuthenticationPrincipal SalyUserDetails userDetails) {
+    public CompletableFuture<Product> editProduct(@RequestBody UpdateProductRequest request, @AuthenticationPrincipal SalyUserDetails userDetails) {
         return productService.updateProduct(userDetails.getShopDetails(), request);
     }
 

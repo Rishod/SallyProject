@@ -4,6 +4,8 @@ import com.sally.api.Product;
 import com.sally.api.commands.CreateProductCommand;
 import com.sally.api.commands.DeleteProductCommand;
 import com.sally.api.commands.UpdateProductCommand;
+import com.sally.api.query.GetAllProductsQuery;
+import com.sally.api.query.GetProductByIdQuery;
 import com.sally.api.requests.CreateProductRequest;
 import com.sally.api.requests.UpdateProductRequest;
 import com.sally.auth.ShopDetails;
@@ -14,11 +16,14 @@ import com.sally.shop.dao.ProductDAO;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.eventhandling.gateway.EventGateway;
+import org.axonframework.messaging.responsetypes.ResponseTypes;
+import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -26,30 +31,27 @@ import java.util.stream.Collectors;
 public class ProductServiceImpl implements ProductService {
     private final ProductDAO productDAO;
     private final CommandGateway commandGateway;
+    private final QueryGateway queryGateway;
 
-    public ProductServiceImpl(ProductDAO productDAO, CommandGateway commandGateway, EventGateway eventGateway) {
+    public ProductServiceImpl(ProductDAO productDAO, CommandGateway commandGateway, EventGateway eventGateway, QueryGateway queryGateway) {
         this.productDAO = productDAO;
         this.commandGateway = commandGateway;
+        this.queryGateway = queryGateway;
     }
 
     @Override
-    @Transactional
-    public Product saveProduct(final ShopDetails shop, final CreateProductRequest request) {
-        final ProductEntity productEntity = productDAO.saveProduct(shop.getId(), request.getName(), request.getDescription(),
-                request.getPrice());
-
+    public CompletableFuture<Product> saveProduct(final ShopDetails shop, final CreateProductRequest request) {
+        final UUID productId = UUID.randomUUID();
         final CreateProductCommand createProductCommand = CreateProductCommand.builder()
-                .productId(productEntity.getId())
-                .shopId(productEntity.getShopId())
+                .productId(productId)
+                .shopId(shop.getId())
                 .shopName(shop.getName())
-                .name(productEntity.getName())
-                .description(productEntity.getDescription())
-                .price(productEntity.getPrice())
+                .name(request.getName())
+                .description(request.getDescription())
+                .price(request.getPrice())
                 .build();
 
-        commandGateway.sendAndWait(createProductCommand);
-
-        return mapProduct(productEntity);
+        return commandGateway.send(createProductCommand);
     }
 
     private Product mapProduct(final ProductEntity productEntity) {
@@ -64,22 +66,17 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @Transactional
-    public Product updateProduct(final ShopDetails shop, final UpdateProductRequest request) {
-        final ProductEntity productEntity = productDAO.updateProduct(request.getId(), shop.getId(), request.getName(),
-                request.getDescription(), request.getPrice());
-
+    public CompletableFuture<Product> updateProduct(final ShopDetails shop, final UpdateProductRequest request) {
         final UpdateProductCommand updateProductCommand = UpdateProductCommand.builder()
-                .productId(productEntity.getId())
-                .shopId(productEntity.getShopId())
+                .productId(request.getId())
+                .shopId(shop.getId())
                 .shopName(shop.getName())
-                .name(productEntity.getName())
-                .description(productEntity.getDescription())
-                .price(productEntity.getPrice())
+                .name(request.getName())
+                .description(request.getDescription())
+                .price(request.getPrice())
                 .build();
 
-        commandGateway.sendAndWait(updateProductCommand);
-
-        return mapProduct(productEntity);
+        return commandGateway.send(updateProductCommand);
     }
 
     @Override
@@ -106,6 +103,15 @@ public class ProductServiceImpl implements ProductService {
             productDAO.delete(shopId, productId);
             commandGateway.sendAndWait(new DeleteProductCommand(productId, shopId));
         });
+    }
 
+    @Override
+    public CompletableFuture<Product> queryProduct(UUID productId) {
+        return queryGateway.query(new GetProductByIdQuery(productId), ResponseTypes.instanceOf(Product.class));
+    }
+
+    @Override
+    public CompletableFuture<List<Product>> queryProducts() {
+        return queryGateway.query(new GetAllProductsQuery(), ResponseTypes.multipleInstancesOf(Product.class));
     }
 }

@@ -17,14 +17,15 @@ public abstract class AbstractEntity {
     @Setter
     @Getter
     @Column(name = "id")
-    @GeneratedValue
-    private UUID id;
+//    @GeneratedValue
+    private UUID id = UUID.randomUUID();
 
     @Getter
     @Column(name = "created_at")
     private LocalDateTime createdAt = LocalDateTime.now();
 
     @Getter
+    @Setter
     @Column(name = "updated_at")
     private LocalDateTime updatedAt = LocalDateTime.now();
 }

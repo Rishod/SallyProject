@@ -4,18 +4,20 @@ import static com.sally.order.OrderServiceEndpoints.ORDER;
 import static com.sally.order.OrderServiceEndpoints.ORDER_CANCEL;
 import static com.sally.order.OrderServiceEndpoints.V1;
 
-import com.sally.api.commands.CancelOrderCommand;
-import com.sally.api.commands.CreateOrderCommand;
+import com.sally.api.Order;
 import com.sally.api.requests.CreateOrderRequest;
 import com.sally.auth.SalyUserDetails;
-import org.axonframework.commandhandling.gateway.CommandGateway;
+import com.sally.order.services.OrderService;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
@@ -23,33 +25,27 @@ import java.util.concurrent.CompletableFuture;
 @RestController
 public class OrderControllerV1 {
 
-    private final CommandGateway commandGateway;
+    private final OrderService orderService;
 
-    public OrderControllerV1(CommandGateway commandGateway) {
-        this.commandGateway = commandGateway;
+    public OrderControllerV1(OrderService orderService) {
+        this.orderService = orderService;
     }
 
     @PostMapping(ORDER)
     @PreAuthorize("hasRole('CUSTOMER')")
-    public CompletableFuture<String> placeOrder(@AuthenticationPrincipal SalyUserDetails userDetails, @RequestBody CreateOrderRequest request) {
-        final CreateOrderCommand command = CreateOrderCommand.builder()
-                .orderId(UUID.randomUUID())
-                .customerId(userDetails.getUserId())
-                .customerName(userDetails.getUsername())
-                .items(CreateOrderCommand.Item.fromRequest(request.getOrderItems()))
-                .build();
-
-        return commandGateway.send(command);
+    public CompletableFuture<Order> placeOrder(@AuthenticationPrincipal SalyUserDetails userDetails, @RequestBody CreateOrderRequest request) {
+        return orderService.placeOrder(userDetails, request);
     }
 
     @PostMapping(ORDER_CANCEL)
     @PreAuthorize("hasRole('CUSTOMER')")
-    public CompletableFuture<String> cancelOrder(@AuthenticationPrincipal SalyUserDetails userDetails, @RequestBody CancelOrderCommand request) {
-        final CancelOrderCommand command = CancelOrderCommand.builder()
-                .customerId(userDetails.getUserId())
-                .orderId(request.getOrderId())
-                .build();
+    public CompletableFuture<Void> cancelOrder(@AuthenticationPrincipal SalyUserDetails userDetails, @PathVariable("id") final UUID id) {
+        return orderService.cancelOrder(id, userDetails);
+    }
 
-        return commandGateway.send(command);
+    @GetMapping(ORDER)
+    @PreAuthorize("hasRole('CUSTOMER')")
+    public List<Order> getCustomerOrders(@AuthenticationPrincipal SalyUserDetails userDetails) {
+        return orderService.getCustomerOrders(userDetails);
     }
 }

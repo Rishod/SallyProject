@@ -7,15 +7,20 @@ import com.sally.auth.ShopDetails;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 public interface ProductService {
-    Product saveProduct(ShopDetails shop, CreateProductRequest request);
+    CompletableFuture<Product> saveProduct(ShopDetails shop, CreateProductRequest request);
 
-    Product updateProduct(ShopDetails shop, UpdateProductRequest request);
+    CompletableFuture<Product> updateProduct(ShopDetails shop, UpdateProductRequest request);
 
     Product getProduct(UUID productId);
 
     List<Product> getProducts();
+
+    CompletableFuture<Product> queryProduct(UUID productId);
+
+    CompletableFuture<List<Product>> queryProducts();
 
     void deleteProduct(UUID shopId, UUID productId);
 }

@@ -1,4 +1,4 @@
-package com.sally.shop.service;
+package com.sally.shop.axon;
 
 import com.sally.api.Product;
 import com.sally.api.commands.CreateProductCommand;
@@ -26,6 +26,7 @@ import java.util.concurrent.CompletableFuture;
  * This service implementation representing Event Source pattern which used Axon framework as engine
  */
 @Service
+@Deprecated
 public class EventSourcedProductService  {
 
     private final CommandGateway commandGateway;

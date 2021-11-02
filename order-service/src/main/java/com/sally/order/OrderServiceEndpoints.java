@@ -4,7 +4,8 @@ public class OrderServiceEndpoints {
     public static final String SERVICE_PREFIX = "/order-service";
     public static final String V1 = SERVICE_PREFIX + "/api/v1";
     public static final String ORDER = "/order";
-    public static final String ORDER_CANCEL = ORDER + "/cancel";
+    public static final String ORDER_BY_ID = ORDER + "/{id}";
+    public static final String ORDER_CANCEL = ORDER_BY_ID + "/cancel";
 
 
     public static final String SAGA = ORDER + "/saga";

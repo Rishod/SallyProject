@@ -1,4 +1,4 @@
-package com.sally.shop.service;
+package com.sally.shop.axon;
 
 import com.sally.api.OrderItem;
 import com.sally.api.Product;
@@ -10,6 +10,7 @@ import com.sally.api.events.ProductsVerificationSuccessEvent;
 import com.sally.api.query.FindProductsByIdsQuery;
 import com.sally.shop.dao.ProductDAO;
 import com.sally.shop.dao.entity.ProductEntity;
+import com.sally.shop.service.ShippingService;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventhandling.gateway.EventGateway;

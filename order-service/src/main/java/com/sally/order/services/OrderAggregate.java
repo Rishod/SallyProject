@@ -90,9 +90,4 @@ public class OrderAggregate {
         this.orderStatus = event.getOrderStatus();
     }
 
-    @EventSourcingHandler
-    public void on(final OrderCanceledEvent event) {
-        this.orderStatus = OrderStatus.CANCELED_BY_CUSTOMER;
-    }
-
 }

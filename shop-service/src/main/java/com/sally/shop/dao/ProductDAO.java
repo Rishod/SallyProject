@@ -11,6 +11,8 @@ public interface ProductDAO {
 
     ProductEntity saveProduct(UUID shopId, String name, String description, BigDecimal price);
 
+    ProductEntity saveProduct(UUID id, UUID shopId, String name, String description, BigDecimal price);
+
     ProductEntity updateProduct(UUID productId, UUID shopId, String name, String description, BigDecimal price);
 
     Optional<ProductEntity> getProductById(UUID productId);
