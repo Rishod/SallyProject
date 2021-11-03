@@ -12,7 +12,7 @@ steps:
     args:
       - -c
       - |
-        docker container run -v /var/run/docker.sock:/var/run/docker.sock saly-build mvn verify
+        docker container run -v /var/run/docker.sock:/var/run/docker.sock sally-build mvn verify
   - id: build-gateway
     name: gcr.io/cloud-builders/docker
     entrypoint: bash
