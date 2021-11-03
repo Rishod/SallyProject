@@ -48,9 +48,9 @@ steps:
       - -c
       - |
         docker image build --target user-service --tag gcr.io/${PROJECT_ID}/sally-user-service:${$BRANCH_NAME}-${COMMIT_SHA} .
-  images:
-    - gcr.io/${PROJECT_ID}/sally-gateway:${$BRANCH_NAME}-${COMMIT_SHA}
-    - gcr.io/${PROJECT_ID}/sally-order-service:${$BRANCH_NAME}-${COMMIT_SHA}
-    - gcr.io/${PROJECT_ID}/sally-product-search-service:${$BRANCH_NAME}-${COMMIT_SHA}
-    - gcr.io/${PROJECT_ID}/sally-shop-service:${$BRANCH_NAME}-${COMMIT_SHA}
-    - gcr.io/${PROJECT_ID}/sally-user-service:${$BRANCH_NAME}-${COMMIT_SHA}
+images:
+  - gcr.io/${PROJECT_ID}/sally-gateway:${$BRANCH_NAME}-${COMMIT_SHA}
+  - gcr.io/${PROJECT_ID}/sally-order-service:${$BRANCH_NAME}-${COMMIT_SHA}
+  - gcr.io/${PROJECT_ID}/sally-product-search-service:${$BRANCH_NAME}-${COMMIT_SHA}
+  - gcr.io/${PROJECT_ID}/sally-shop-service:${$BRANCH_NAME}-${COMMIT_SHA}
+  - gcr.io/${PROJECT_ID}/sally-user-service:${$BRANCH_NAME}-${COMMIT_SHA}
