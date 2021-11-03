@@ -28,11 +28,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="all happy path works !!!">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gcp/usefull.txt" beforeDir="false" afterPath="$PROJECT_DIR$/gcp/usefull.txt" afterDir="false" />
+    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,7 +362,7 @@
       <workItem from="1634991463529" duration="19020000" />
       <workItem from="1635410225866" duration="30370000" />
       <workItem from="1635771445797" duration="209000" />
-      <workItem from="1635777251212" duration="30673000" />
+      <workItem from="1635777251212" duration="31241000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -493,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635862987879</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="create cloudbuild.yaml">
+      <created>1635944444651</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1635944444651</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,7 +544,8 @@
     <MESSAGE value="implement new verification command handler (not working yet)" />
     <MESSAGE value="implement order projection" />
     <MESSAGE value="all happy path works !!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="all happy path works !!!" />
+    <MESSAGE value="create cloudbuild.yaml" />
+    <option name="LAST_COMMIT_MESSAGE" value="create cloudbuild.yaml" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1192" y="254" key="#Docker" timestamp="1634302490635">
@@ -595,10 +600,10 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938492525" />
-    <state x="-1195" y="72" key="CommitChangelistDialog2" timestamp="1635938932199">
+    <state x="-1195" y="72" key="CommitChangelistDialog2" timestamp="1635944444242">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635938932199" />
+    <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635944444242" />
     <state x="-1195" y="72" key="CommitChangelistDialog2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350009286" />
     <state x="125" y="65" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1635862987390" />
     <state x="725" y="72" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1635427233529" />
@@ -674,10 +679,10 @@
     </state>
     <state x="-1545" y="106" key="SettingsEditor/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350167613" />
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1635862989725">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2" timestamp="1635944445977">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634311447834" />
+    <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635944445977" />
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350170007" />
     <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1635862989725" />
     <state x="503" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1635427239039" />
