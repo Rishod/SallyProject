@@ -1,0 +1,56 @@
+steps:
+  - id: build-test-image
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+        docker image build --target build --tag sally-build .
+  - id: run-tests
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+      docker container run -v /var/run/docker.sock:/var/run/docker.sock saly-build mvn verify
+  - id: build-gateway
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+      docker image build --target gateway --tag gcr.io/${PROJECT_ID}/sally-gateway:${$BRANCH_NAME}-${COMMIT_SHA} .
+  - id: build-order-service
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+      docker image build --target order-service --tag gcr.io/${PROJECT_ID}/sally-order-service:${$BRANCH_NAME}-${COMMIT_SHA} .
+  - id: build-product-search-service
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+      docker image build --target product-search-service --tag gcr.io/${PROJECT_ID}/sally-product-search-service:${$BRANCH_NAME}-${COMMIT_SHA} .
+  - id: build-shop-service
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+      docker image build --target shop-service --tag gcr.io/${PROJECT_ID}/sally-shop-service:${$BRANCH_NAME}-${COMMIT_SHA} .
+  - id: build-user-service
+    name: gcr.io/cloud-builders/docker
+    entrypoint: bash
+    args:
+      - -c
+      - |
+      docker image build --target user-service --tag gcr.io/${PROJECT_ID}/sally-user-service:${$BRANCH_NAME}-${COMMIT_SHA} .
+  images:
+    - gcr.io/${PROJECT_ID}/sally-gateway:${$BRANCH_NAME}-${COMMIT_SHA}
+    - gcr.io/${PROJECT_ID}/sally-order-service:${$BRANCH_NAME}-${COMMIT_SHA}
+    - gcr.io/${PROJECT_ID}/sally-product-search-service:${$BRANCH_NAME}-${COMMIT_SHA}
+    - gcr.io/${PROJECT_ID}/sally-shop-service:${$BRANCH_NAME}-${COMMIT_SHA}
+    - gcr.io/${PROJECT_ID}/sally-user-service:${$BRANCH_NAME}-${COMMIT_SHA}
