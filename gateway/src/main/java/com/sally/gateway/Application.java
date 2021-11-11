@@ -1,5 +1,7 @@
 package com.sally.gateway;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -8,6 +10,15 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class Application {
+
+    @Value("${user-service.host}")
+    private String userServiceHost;
+    @Value("${order-service.host}")
+    private String orderServiceHost;
+    @Value("${shop-service.host}")
+    private String shopServiceHost;
+    @Value("${product-search-service.host}")
+    private String productSearchServiceHost;
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -18,19 +29,19 @@ public class Application {
         return builder.routes()
                 .route(p -> p
                         .path("/user-service/**")
-                        .uri("http://user-service:8080/")
+                        .uri(userServiceHost)
                         .id("userServiceModule"))
                 .route(p -> p
                         .path("/shop-service/**")
-                        .uri("http://shop-service:8080")
+                        .uri(shopServiceHost)
                         .id("shopServiceModule"))
                 .route(p -> p
                         .path("/product-search-service/**")
-                        .uri("http://product-search-service:8080")
+                        .uri(productSearchServiceHost)
                         .id("productSearchServiceModule"))
                 .route(p -> p
                         .path("/order-service/**")
-                        .uri("http://order-service:8080")
+                        .uri(orderServiceHost)
                         .id("orderServiceModule"))
                 .build();
     }

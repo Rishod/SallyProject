@@ -1,0 +1,13 @@
+service:
+  livenessProbe: /actuator/health/liveness
+  readinessProbe: /actuator/health/readiness
+container:
+  name: sally-gateway
+  port: 8080
+  image: gatewayImage # change during CD
+  tag: gatewayTag # change during CD
+replicas: 1
+userServiceHost: http://user-service
+shopServiceHost: http://shop-service
+orderServiceHost: http://order-service
+productSearchServiceHost: http://product-search-service

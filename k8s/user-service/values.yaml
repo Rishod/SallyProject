@@ -1,0 +1,16 @@
+container:
+  name: sally-user
+  port: 8080
+  image: userImage # change during CD
+  tag: userTag # change during CD
+replicas: 1
+sally:
+  superUserName: Vlad
+  superUserPassword: qweqwe # change during CD
+datasource:
+  url: qweqwe
+  username: sally-user
+  password: qweqwe # change during CD
+jwt:
+  tokenValidity: 6000
+  secret: qweqwe # change during CD
