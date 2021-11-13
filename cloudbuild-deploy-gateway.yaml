@@ -21,7 +21,7 @@ steps:
       - staging-sally-gateway
       - --namespace=staging
       - --values
-      - k8s/gateway/values.yaml
+      - /workspace/k8s/gateway/values.yaml
       - --set
       - container.image=gcr.io/${PROJECT_ID}/sally-gateway
       - --set
