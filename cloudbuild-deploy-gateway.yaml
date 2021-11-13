@@ -26,7 +26,7 @@ steps:
       - container.image=gcr.io/${PROJECT_ID}/sally-gateway
       - --set
       - container.tag=${BRANCH_NAME}-${SHORT_SHA}
-      - ./k8s/gateway/
+      - /workspace/k8s/gateway
 substitutions:
   _CLOUDSDK_CORE_PROJECT: vlad-proj-test
   _CLOUDSDK_COMPUTE_ZONE: us-central1-c

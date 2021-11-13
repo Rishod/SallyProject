@@ -28,9 +28,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="fix path to gateway k8s">
+    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloudbuild-deploy-gateway.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild-deploy-gateway.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sally/order/services/OrderSaga.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sally/order/services/OrderSaga.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,6 +248,7 @@
     <configuration name="docker-compose.yml.gateway-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="commandLineOptions" value="--build" />
           <option name="services">
             <list>
               <option value="gateway-service" />
@@ -301,6 +304,7 @@
       <item itemvalue="Docker.docker-compose.yml.shop-service-postgres: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.user-service-postgres: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.gateway-service: Compose Deployment" />
       <item itemvalue="Maven.Build &amp; Report" />
       <item itemvalue="Remote.User Service Debug" />
       <item itemvalue="Spring Boot.Application" />
@@ -308,7 +312,6 @@
       <item itemvalue="Spring Boot.Application (2)" />
       <item itemvalue="Spring Boot.Application (3)" />
       <item itemvalue="Spring Boot.Application (4)" />
-      <item itemvalue="Docker.docker-compose.yml.gateway-service: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
@@ -363,7 +366,7 @@
       <workItem from="1634991463529" duration="19020000" />
       <workItem from="1635410225866" duration="30370000" />
       <workItem from="1635771445797" duration="209000" />
-      <workItem from="1635777251212" duration="64019000" />
+      <workItem from="1635777251212" duration="67239000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -547,7 +550,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636802727619</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fix path to gateway k8s">
+      <created>1636811302439</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1636811302440</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -621,11 +631,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="241" y="358" key="#SQL_Dialects/0.0.1680.1050@0.0.1680.1050" timestamp="1627466945388" />
-    <state x="250" y="116" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1635862450245">
+    <state x="250" y="116" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636812820138">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1557" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634307256529" />
-    <state x="250" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1635862450245" />
+    <state x="250" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1636812820138" />
     <state x="367" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1635430656249" />
     <state x="321" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.942@0.25.1680.942" timestamp="1635770028827" />
     <state x="573" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636461905945">
@@ -658,12 +668,12 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938492525" />
-    <state x="125" y="65" key="CommitChangelistDialog2" timestamp="1636810801328">
+    <state x="125" y="65" key="CommitChangelistDialog2" timestamp="1636811302077">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951303732" />
     <state x="-1195" y="72" key="CommitChangelistDialog2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350009286" />
-    <state x="125" y="65" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636810801328" />
+    <state x="125" y="65" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636811302077" />
     <state x="725" y="72" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661851239" />
     <state x="125" y="83" key="CommitChangelistDialog2/0.25.1680.942@0.25.1680.942" timestamp="1635770317672" />
     <state x="2405" y="72" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170841639" />
@@ -737,12 +747,12 @@
     </state>
     <state x="-1545" y="106" key="SettingsEditor/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350167613" />
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1636802729026">
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1636811304222">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951305536" />
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350170007" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636802729026" />
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636811304222" />
     <state x="503" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661853026" />
     <state x="440" y="260" key="Vcs.Push.Dialog.v2/0.25.1680.942@0.25.1680.942" timestamp="1635770320724" />
     <state x="2183" y="269" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170843940" />
