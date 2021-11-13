@@ -1,3 +1,6 @@
+service:
+  livenessProbe: /actuator/health/liveness
+  readinessProbe: /actuator/health/readiness
 container:
   name: sally-user
   port: 8080
@@ -8,8 +11,8 @@ sally:
   superUserName: Vlad
   superUserPassword: qweqwe # change during CD
 datasource:
-  url: qweqwe
-  username: sally-user
+  url: jdbc:postgresql://localhost:5432/user-service-db
+  username: postgres
   password: qweqwe # change during CD
 jwt:
   tokenValidity: 6000

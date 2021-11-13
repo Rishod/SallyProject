@@ -12,8 +12,40 @@ spec:
       labels:
         app: {{ .Values.container.name }}
     spec:
+      serviceAccountName: cloud-sql-sa
       containers:
         - name: {{ .Values.container.name }}
           image: {{ .Values.container.image }}:{{ .Values.container.tag }}
           ports:
             - containerPort: {{ .Values.container.port }}
+          env:
+            - name: SALLY_SUPER_NAME
+              value: {{ .Values.sally.superUserName }}
+            - name: DATA_SOURCE_URL
+              value: {{ .Values.datasource.url }}
+            - name: DATA_SOURCE_USERNAME
+              value: {{ .Values.datasource.password }}
+            - name: JWT_TOKEN_VALIDITY
+              value: {{ .Values.jwt.tokenValidity }}
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: -secrets
+                  key: jwtToken
+            - name: DATA_SOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: -secrets
+                  key: datasourcePassword
+            - name: SALLY_SUPER_USER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: -secrets
+                  key: sallySuperUserPassword
+        - name: cloud-sql-proxy
+          image: gcr.io/cloudsql-docker/gce-proxy:1.18.0
+          command:
+            - "/cloud_sql_proxy"
+            - "-instances=<PROJECT_ID>:<ZONE>:<INSTANCE_NAME>=tcp:3306"
+          securityContext:
+           runAsNonRoot: true

@@ -1,0 +1,33 @@
+steps:
+  - id: get-kube-config
+    dir: hello-cloudbuild
+    name: gcr.io/cloud-builders/kubectl
+    env:
+      - CLOUDSDK_CORE_PROJECT=${_CLOUDSDK_CORE_PROJECT}
+      - CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}
+      - CLOUDSDK_CONTAINER_CLUSTER=${_CLOUDSDK_CONTAINER_CLUSTER}
+      - KUBECONFIG=/workspace/.kube/config
+    args:
+      - cluster-info
+  - id: deploy
+    dir: hello-cloudbuild
+    name: cloudnatived/helm-cloudbuilder
+    env:
+      - KUBECONFIG=/workspace/.kube/config
+    args:
+      - helm
+      - upgrade
+      - --install
+      - staging-sally-user-service
+      - --namespace=staging
+      - --values
+      - /workspace/k8s/user-service/values.yaml
+      - --set
+      - container.image=gcr.io/${PROJECT_ID}/sally-user-service
+      - --set
+      - container.tag=${BRANCH_NAME}-${SHORT_SHA}
+      - /workspace/k8s/user-service
+substitutions:
+  _CLOUDSDK_CORE_PROJECT: vlad-proj-test
+  _CLOUDSDK_COMPUTE_ZONE: us-central1-c
+  _CLOUDSDK_CONTAINER_CLUSTER: sally-cluster
