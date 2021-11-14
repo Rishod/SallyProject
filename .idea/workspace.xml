@@ -29,14 +29,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cloudbuild-deploy-user-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/axonserver.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/cloud-sql-sq.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/configureAuthProxy.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudbuild-deploy-user-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild-deploy-user-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/gateway/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/gateway/values.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/user-service/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/user-service/templates/deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/user-service/templates/service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/user-service/templates/service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/user-service/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/user-service/values.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +149,7 @@
       <recent name="com.sally.user.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.gateway-service: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml.user-service: Compose Deployment">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -277,19 +276,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.shop-service-postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="shop-service-postgres" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml.user-service-postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -303,12 +289,26 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.user-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="commandLineOptions" value="--build" />
+          <option name="services">
+            <list>
+              <option value="user-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.shop-service-postgres: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.user-service-postgres: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.gateway-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.user-service: Compose Deployment" />
       <item itemvalue="Maven.Build &amp; Report" />
       <item itemvalue="Remote.User Service Debug" />
       <item itemvalue="Spring Boot.Application" />
@@ -319,11 +319,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.user-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.user-service-postgres: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.gateway-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.user-service-postgres: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.shop-service-postgres: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -370,7 +370,7 @@
       <workItem from="1634991463529" duration="19020000" />
       <workItem from="1635410225866" duration="30370000" />
       <workItem from="1635771445797" duration="209000" />
-      <workItem from="1635777251212" duration="74306000" />
+      <workItem from="1635777251212" duration="76450000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -575,7 +575,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636815186946</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="create and bind service account">
+      <created>1636823174996</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1636823174996</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,7 +636,8 @@
     <MESSAGE value="fix path to gateway k8s" />
     <MESSAGE value="fix actuator and chart path" />
     <MESSAGE value="fix path to values" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix path to values" />
+    <MESSAGE value="create and bind service account" />
+    <option name="LAST_COMMIT_MESSAGE" value="create and bind service account" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1192" y="254" key="#Docker" timestamp="1634302490635">
@@ -651,11 +659,11 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="241" y="358" key="#SQL_Dialects/0.0.1680.1050@0.0.1680.1050" timestamp="1627466945388" />
-    <state x="250" y="116" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636812820138">
+    <state x="250" y="116" width="1071" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1636880335596">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1557" y="119" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634307256529" />
-    <state x="250" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1636812820138" />
+    <state x="250" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1636880335596" />
     <state x="367" y="105" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1635430656249" />
     <state x="321" y="117" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.942@0.25.1680.942" timestamp="1635770028827" />
     <state x="573" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636461905945">
@@ -688,12 +696,12 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938492525" />
-    <state x="333" y="85" key="CommitChangelistDialog2" timestamp="1636815186556">
+    <state x="333" y="85" key="CommitChangelistDialog2" timestamp="1636823174532">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951303732" />
     <state x="-1195" y="72" key="CommitChangelistDialog2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350009286" />
-    <state x="333" y="85" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636815186556" />
+    <state x="333" y="85" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636823174532" />
     <state x="725" y="72" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661851239" />
     <state x="125" y="83" key="CommitChangelistDialog2/0.25.1680.942@0.25.1680.942" timestamp="1635770317672" />
     <state x="2405" y="72" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170841639" />
@@ -767,12 +775,12 @@
     </state>
     <state x="-1545" y="106" key="SettingsEditor/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350167613" />
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1636815197401">
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1636823176326">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951305536" />
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350170007" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636815197401" />
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636823176326" />
     <state x="503" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661853026" />
     <state x="440" y="260" key="Vcs.Push.Dialog.v2/0.25.1680.942@0.25.1680.942" timestamp="1635770320724" />
     <state x="2183" y="269" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170843940" />

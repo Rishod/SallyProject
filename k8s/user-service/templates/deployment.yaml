@@ -18,13 +18,21 @@ spec:
           image: {{ .Values.container.image }}:{{ .Values.container.tag }}
           ports:
             - containerPort: {{ .Values.container.port }}
+          readinessProbe:
+            httpGet:
+              port: {{ .Values.container.port }}
+              path: {{ .Values.service.readinessProbe }}
+          livenessProbe:
+            httpGet:
+              port: {{ .Values.container.port }}
+              path: {{ .Values.service.livenessProbe }}
           env:
             - name: SALLY_SUPER_NAME
               value: {{ .Values.sally.superUserName }}
             - name: DATA_SOURCE_URL
               value: {{ .Values.datasource.url }}
             - name: DATA_SOURCE_USERNAME
-              value: {{ .Values.datasource.password }}
+              value: {{ .Values.datasource.username }}
             - name: JWT_TOKEN_VALIDITY
               value: {{ .Values.jwt.tokenValidity }}
             - name: JWT_SECRET
@@ -46,6 +54,6 @@ spec:
           image: gcr.io/cloudsql-docker/gce-proxy:1.18.0
           command:
             - "/cloud_sql_proxy"
-            - "-instances=<PROJECT_ID>:<ZONE>:<INSTANCE_NAME>=tcp:3306"
+            - "-instances=vlad-proj-test:us-central1:sallydb=tcp:5432"
           securityContext:
            runAsNonRoot: true

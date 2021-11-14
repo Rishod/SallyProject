@@ -11,7 +11,7 @@ sally:
   superUserName: Vlad
   superUserPassword: qweqwe # change during CD
 datasource:
-  url: jdbc:postgresql://localhost:5432/user-service-db
+  url: jdbc:postgresql://127.0.0.1:5432/user-service-db
   username: postgres
   password: qweqwe # change during CD
 jwt:

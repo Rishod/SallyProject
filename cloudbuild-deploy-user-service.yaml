@@ -26,7 +26,22 @@ steps:
       - container.image=gcr.io/${PROJECT_ID}/sally-user-service
       - --set
       - container.tag=${BRANCH_NAME}-${SHORT_SHA}
+      - --set
+      - datasource.password=${DB_PASSWORD}
+      - --set
+      - jwt.secret=${JWT_TOKEN}
+      - --set
+      - sally.superUserPassword=${SUPER_USER_PASSWORD}
       - /workspace/k8s/user-service
+    secretEnv: ['DB_PASSWORD', 'JWT_TOKEN', 'SUPER_USER_PASSWORD']
+availableSecrets:
+  secretManager:
+    - versionName: projects/890679351586/secrets/db-password/versions/1
+      env: 'DB_PASSWORD'
+    - versionName: projects/890679351586/secrets/sally-jwt-token/versions/1
+      env: 'JWT_TOKEN'
+    - versionName: projects/890679351586/secrets/sally-super-user-password/versions/1
+      env: 'SUPER_USER_PASSWORD'
 substitutions:
   _CLOUDSDK_CORE_PROJECT: vlad-proj-test
   _CLOUDSDK_COMPUTE_ZONE: us-central1-c
