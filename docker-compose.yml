@@ -18,7 +18,6 @@ services:
     build:
       context: user-service
     ports:
-      - "8080:8080"
       - "7002:5005" # for debug
     environment:
       SPRING_PROFILES_ACTIVE: dev

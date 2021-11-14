@@ -1,6 +1,5 @@
 package com.sally.gateway;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,6 +18,8 @@ public class Application {
     private String shopServiceHost;
     @Value("${product-search-service.host}")
     private String productSearchServiceHost;
+    @Value("${axon-gui.host}")
+    private String axonGuiHost;
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -43,6 +44,10 @@ public class Application {
                         .path("/order-service/**")
                         .uri(orderServiceHost)
                         .id("orderServiceModule"))
+                .route(p -> p
+                        .path("/axon/**")
+                        .uri(axonGuiHost)
+                        .id("axonGuiModule"))
                 .build();
     }
 

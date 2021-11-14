@@ -1,0 +1,17 @@
+service:
+  livenessProbe: /actuator/health/liveness
+  readinessProbe: /actuator/health/readiness
+container:
+  name: sally-shop
+  port: 8080
+  image: shopImage # change during CD
+  tag: shopTag # change during CD
+replicas: 1
+datasource:
+  url: jdbc:postgresql://127.0.0.1:5432/shop-service-db
+  username: postgres
+  password: qweqwe # change during CD
+jwt:
+  secret: qweqwe # change during CD
+axon:
+  host: axonserver

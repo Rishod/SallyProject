@@ -11,3 +11,4 @@ userServiceHost: http://sally-user-service
 shopServiceHost: http://sally-shop-service
 orderServiceHost: http://sally-order-service
 productSearchServiceHost: http://sally-product-search-service
+axonGuiHost: http://axonserver-gui

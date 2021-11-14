@@ -35,3 +35,5 @@ spec:
               value: {{ .Values.orderServiceHost }}
             - name: PRODUCT_SEARCH_SERVICE_HOST
               value: {{ .Values.productSearchServiceHost }}
+            - name: AXON_GUI_HOST
+              value: {{ .Values.axonGuiHost }}
