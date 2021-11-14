@@ -14,39 +14,34 @@ steps:
     name: cloudnatived/helm-cloudbuilder
     env:
       - KUBECONFIG=/workspace/.kube/config
-    entrypoint: bash
     args:
-      - -c
-      - |
-        helm upgrade --install staging-sally-user-service --namespace=staging --values /workspace/k8s/user-service/values.yaml --set container.image=gcr.io/${PROJECT_ID}/sally-user-service --set container.tag=${BRANCH_NAME}-${SHORT_SHA} --set datasource.password=$$_DB_PASSWORD --set jwt.secret=$$_JWT_TOKEN --set sally.superUserPassword=$$_SUPER_USER_PASSWORD /workspace/k8s/user-service
-#    args:
-#      - helm
-#      - upgrade
-#      - --install
-#      - staging-sally-user-service
-#      - --namespace=staging
-#      - --values
-#      - /workspace/k8s/user-service/values.yaml
-#      - --set
-#      - container.image=gcr.io/${PROJECT_ID}/sally-user-service
-#      - --set
-#      - container.tag=${BRANCH_NAME}-${SHORT_SHA}
-#      - --set
-#      - datasource.password=BH9O83OOKDkODx8n
-#      - --set
-#      - jwt.secret=$$_JWT_TOKEN
-#      - --set
-#      - sally.superUserPassword=$$_SUPER_USER_PASSWORD
-#      - /workspace/k8s/user-service
-    secretEnv: ['_DB_PASSWORD', '_JWT_TOKEN', '_SUPER_USER_PASSWORD']
+      - helm
+      - upgrade
+      - --install
+      - staging-sally-user-service
+      - --namespace=staging
+      - --values
+      - /workspace/k8s/user-service/values.yaml
+      - --set
+      - container.image=gcr.io/${PROJECT_ID}/sally-user-service
+      - --set
+      - container.tag=${BRANCH_NAME}-${SHORT_SHA}
+      - --set
+      - datasource.password=$$_DB_PASSWORD
+      - --set
+      - jwt.secret=$$_JWT_TOKEN
+      - --set
+      - sally.superUserPassword=$$_SUPER_USER_PASSWORD
+      - /workspace/k8s/user-service
+    secretEnv: [_DB_PASSWORD, _JWT_TOKEN, _SUPER_USER_PASSWORD]
 availableSecrets:
   secretManager:
-    - versionName: projects/890679351586/secrets/db-password/versions/1
-      env: '_DB_PASSWORD'
-    - versionName: projects/890679351586/secrets/sally-jwt-token/versions/1
-      env: '_JWT_TOKEN'
-    - versionName: projects/890679351586/secrets/sally-super-user-password/versions/1
-      env: '_SUPER_USER_PASSWORD'
+    - versionName: projects/890679351586/secrets/db-password/versions/latest
+      env: _DB_PASSWORD
+    - versionName: projects/890679351586/secrets/sally-jwt-token/versions/latest
+      env: _JWT_TOKEN
+    - versionName: projects/890679351586/secrets/sally-super-user-password/versions/latest
+      env: _SUPER_USER_PASSWORD
 substitutions:
   _CLOUDSDK_CORE_PROJECT: vlad-proj-test
   _CLOUDSDK_COMPUTE_ZONE: us-central1-c
