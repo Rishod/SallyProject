@@ -28,15 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudbuild-deploy-user-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild-deploy-user-service.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/gateway/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/gateway/values.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/user-service/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/user-service/templates/deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/user-service/values.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/user-service/values.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -370,7 +362,7 @@
       <workItem from="1634991463529" duration="19020000" />
       <workItem from="1635410225866" duration="30370000" />
       <workItem from="1635771445797" duration="209000" />
-      <workItem from="1635777251212" duration="76450000" />
+      <workItem from="1635777251212" duration="76827000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -582,7 +574,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636823174996</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="create user-service deployment">
+      <created>1636881444309</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1636881444309</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,7 +636,8 @@
     <MESSAGE value="fix actuator and chart path" />
     <MESSAGE value="fix path to values" />
     <MESSAGE value="create and bind service account" />
-    <option name="LAST_COMMIT_MESSAGE" value="create and bind service account" />
+    <MESSAGE value="create user-service deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="create user-service deployment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1192" y="254" key="#Docker" timestamp="1634302490635">
@@ -696,12 +696,12 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938492525" />
-    <state x="333" y="85" key="CommitChangelistDialog2" timestamp="1636823174532">
+    <state x="333" y="85" key="CommitChangelistDialog2" timestamp="1636881443904">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951303732" />
     <state x="-1195" y="72" key="CommitChangelistDialog2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350009286" />
-    <state x="333" y="85" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636823174532" />
+    <state x="333" y="85" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636881443904" />
     <state x="725" y="72" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661851239" />
     <state x="125" y="83" key="CommitChangelistDialog2/0.25.1680.942@0.25.1680.942" timestamp="1635770317672" />
     <state x="2405" y="72" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170841639" />
@@ -775,12 +775,12 @@
     </state>
     <state x="-1545" y="106" key="SettingsEditor/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350167613" />
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1636823176326">
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1636881446021">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951305536" />
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350170007" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636823176326" />
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636881446021" />
     <state x="503" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661853026" />
     <state x="440" y="260" key="Vcs.Push.Dialog.v2/0.25.1680.942@0.25.1680.942" timestamp="1635770320724" />
     <state x="2183" y="269" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170843940" />
