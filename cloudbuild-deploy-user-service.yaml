@@ -27,7 +27,7 @@ steps:
       - --set
       - container.tag=${BRANCH_NAME}-${SHORT_SHA}
       - --set
-      - datasource.password=$$_DB_PASSWORD
+      - datasource.password=BH9O83OOKDkODx8n
       - --set
       - jwt.secret=$$_JWT_TOKEN
       - --set
