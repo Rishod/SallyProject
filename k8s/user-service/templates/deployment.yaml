@@ -38,17 +38,17 @@ spec:
             - name: JWT_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: -secrets
+                  name: {{ .Values.container.name }}-secrets
                   key: jwtToken
             - name: DATA_SOURCE_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: -secrets
+                  name: {{ .Values.container.name }}-secrets
                   key: datasourcePassword
             - name: SALLY_SUPER_USER_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: -secrets
+                  name: {{ .Values.container.name }}-secrets
                   key: sallySuperUserPassword
         - name: cloud-sql-proxy
           image: gcr.io/cloudsql-docker/gce-proxy:1.18.0
