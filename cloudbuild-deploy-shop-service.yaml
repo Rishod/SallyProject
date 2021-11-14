@@ -30,7 +30,7 @@ steps:
       - datasource.password=BH9O83OOKDkODx8n
       - --set
       - jwt.secret=qweefvr434v3ver
-      - /workspace/k8s/user-service
+      - /workspace/k8s/shop-service
     secretEnv: [_DB_PASSWORD, _JWT_TOKEN]
 availableSecrets:
   secretManager:
