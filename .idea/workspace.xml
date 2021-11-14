@@ -29,6 +29,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/user-service/templates/deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/user-service/templates/deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -364,7 +365,7 @@
       <workItem from="1634991463529" duration="19020000" />
       <workItem from="1635410225866" duration="30370000" />
       <workItem from="1635771445797" duration="209000" />
-      <workItem from="1635777251212" duration="79269000" />
+      <workItem from="1635777251212" duration="80680000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -611,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636884229167</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fix link to secret">
+      <created>1636884665352</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1636884665352</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +650,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add shop service endpoints&#10;configure dao test&#10;configure gateway to not use service signature on endpoint&#10;integrate coveralls" />
     <MESSAGE value="complete shop service endpoint" />
     <MESSAGE value="shop service fix + tests&#10;gateway: moving config to java code" />
     <MESSAGE value="add product-search-service" />
@@ -667,7 +674,8 @@
     <MESSAGE value="fix substitutions" />
     <MESSAGE value="fix secrets" />
     <MESSAGE value="fix env" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix env" />
+    <MESSAGE value="fix link to secret" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix link to secret" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1192" y="254" key="#Docker" timestamp="1634302490635">
@@ -726,12 +734,12 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938492525" />
-    <state x="333" y="85" key="CommitChangelistDialog2" timestamp="1636884228848">
+    <state x="333" y="85" key="CommitChangelistDialog2" timestamp="1636884664980">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951303732" />
     <state x="-1195" y="72" key="CommitChangelistDialog2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350009286" />
-    <state x="333" y="85" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636884228848" />
+    <state x="333" y="85" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636884664980" />
     <state x="725" y="72" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661851239" />
     <state x="125" y="83" key="CommitChangelistDialog2/0.25.1680.942@0.25.1680.942" timestamp="1635770317672" />
     <state x="2405" y="72" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170841639" />
@@ -805,12 +813,12 @@
     </state>
     <state x="-1545" y="106" key="SettingsEditor/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350167613" />
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1636884230471">
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1636884666655">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951305536" />
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350170007" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636884230471" />
+    <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636884666655" />
     <state x="503" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661853026" />
     <state x="440" y="260" key="Vcs.Push.Dialog.v2/0.25.1680.942@0.25.1680.942" timestamp="1635770320724" />
     <state x="2183" y="269" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170843940" />
