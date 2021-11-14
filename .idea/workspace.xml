@@ -31,6 +31,8 @@
     <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloudbuild-deploy-user-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild-deploy-user-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/axonserver.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/axonserver.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/src/main/resources/db/migration/V1__init.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,7 +367,7 @@
       <workItem from="1634991463529" duration="19020000" />
       <workItem from="1635410225866" duration="30370000" />
       <workItem from="1635771445797" duration="209000" />
-      <workItem from="1635777251212" duration="84358000" />
+      <workItem from="1635777251212" duration="87550000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -640,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636890470710</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="try different interpolation #2">
+      <created>1636897904461</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1636897904461</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +680,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="integrate product-search service to cluster" />
     <MESSAGE value="insert test data + fixing bugs" />
     <MESSAGE value="create order service" />
     <MESSAGE value="order saga implementation" />
@@ -696,7 +704,8 @@
     <MESSAGE value="change version of cloud proxy" />
     <MESSAGE value="check secrets interpolation" />
     <MESSAGE value="try different interpolation" />
-    <option name="LAST_COMMIT_MESSAGE" value="try different interpolation" />
+    <MESSAGE value="try different interpolation #2" />
+    <option name="LAST_COMMIT_MESSAGE" value="try different interpolation #2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1192" y="254" key="#Docker" timestamp="1634302490635">
@@ -755,13 +764,13 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938492525" />
-    <state x="333" y="85" key="CommitChangelistDialog2" timestamp="1636890470301">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="725" y="72" key="CommitChangelistDialog2" timestamp="1636897904192">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951303732" />
     <state x="-1195" y="72" key="CommitChangelistDialog2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350009286" />
     <state x="333" y="85" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636890470301" />
-    <state x="725" y="72" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661851239" />
+    <state x="725" y="72" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1636897904192" />
     <state x="125" y="83" key="CommitChangelistDialog2/0.25.1680.942@0.25.1680.942" timestamp="1635770317672" />
     <state x="2405" y="72" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170841639" />
     <state x="384" y="66" width="1344" height="840" key="DiffContextDialog" timestamp="1634741500667">
@@ -835,13 +844,13 @@
     </state>
     <state x="-1545" y="106" key="SettingsEditor/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350167613" />
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
-    <state x="440" y="262" key="Vcs.Push.Dialog.v2" timestamp="1636890473073">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="503" y="269" key="Vcs.Push.Dialog.v2" timestamp="1636897905940">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951305536" />
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350170007" />
     <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636890473073" />
-    <state x="503" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1636661853026" />
+    <state x="503" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1636897905940" />
     <state x="440" y="260" key="Vcs.Push.Dialog.v2/0.25.1680.942@0.25.1680.942" timestamp="1635770320724" />
     <state x="2183" y="269" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170843940" />
     <state x="631" y="307" key="chooseDestDirectoryDialog" timestamp="1627464404433">

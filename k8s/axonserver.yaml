@@ -34,6 +34,17 @@ spec:
           initialDelaySeconds: 5
           periodSeconds: 5
           timeoutSeconds: 1
+        volumeMounts:
+          - name: axondata
+            mountPath: /data
+  volumeClaimTemplates:
+    - metadata:
+        name: axondata
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        resources:
+          requests:
+            storage: 4Gi
 ---
 apiVersion: v1
 kind: Service
