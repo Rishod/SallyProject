@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
 
+helm upgrade --install staging-sally-user-service --namespace=staging --values /workspace/k8s/user-service/values.yaml --set container.image=gcr.io/${PROJECT_ID}/sally-user-service --set container.tag=${BRANCH_NAME}-${SHORT_SHA} --set datasource.password=$$_DB_PASSWORD --set jwt.secret=$$_JWT_TOKEN --set sally.superUserPassword=$$_SUPER_USER_PASSWORD /workspace/k8s/user-service
