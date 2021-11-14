@@ -34,7 +34,7 @@ spec:
             - name: DATA_SOURCE_USERNAME
               value: {{ .Values.datasource.username }}
             - name: JWT_TOKEN_VALIDITY
-              value: {{ .Values.jwt.tokenValidity }}
+              value: {{ .Values.jwt.tokenValidity | quote }}
             - name: JWT_SECRET
               valueFrom:
                 secretKeyRef:
