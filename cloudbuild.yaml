@@ -6,13 +6,13 @@ steps:
       - -c
       - |
         docker image build --target build --tag sally-build .
-  - id: run-tests
-    name: gcr.io/cloud-builders/docker
-    entrypoint: bash
-    args:
-      - -c
-      - |
-        docker container run -v /var/run/docker.sock:/var/run/docker.sock sally-build mvn verify
+#  - id: run-tests
+#    name: gcr.io/cloud-builders/docker
+#    entrypoint: bash
+#    args:
+#      - -c
+#      - |
+#        docker container run -v /var/run/docker.sock:/var/run/docker.sock sally-build mvn verify
   - id: build-gateway
     name: gcr.io/cloud-builders/docker
     entrypoint: bash
