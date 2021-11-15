@@ -123,7 +123,6 @@ services:
       - sally-gateway-network
   ###################
 
-
 networks:
   sally-gateway-network:
   sally-user-service-network:
