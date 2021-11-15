@@ -14,23 +14,11 @@ steps:
     name: cloudnatived/helm-cloudbuilder
     env:
       - KUBECONFIG=/workspace/.kube/config
+    entrypoint: /bin/sh
     args:
-      - helm
-      - upgrade
-      - --install
-      - staging-sally-order-service
-      - --namespace=staging
-      - --values
-      - /workspace/k8s/order-service/values.yaml
-      - --set
-      - container.image=gcr.io/${PROJECT_ID}/sally-order-service
-      - --set
-      - container.tag=${BRANCH_NAME}-${SHORT_SHA}
-      - --set
-      - datasource.password=BH9O83OOKDkODx8n
-      - --set
-      - jwt.secret=qweefvr434v3ver
-      - /workspace/k8s/order-service
+      - -c
+      - |
+        helm upgrade --install staging-sally-order-service --namespace=staging --values /workspace/k8s/order-service/values.yaml --set container.image=gcr.io/${PROJECT_ID}/sally-order-service --set container.tag=${BRANCH_NAME}-${SHORT_SHA} --set datasource.password=$$_DB_PASSWORD --set jwt.secret=$$_JWT_TOKEN /workspace/k8s/order-service
     secretEnv: [_DB_PASSWORD, _JWT_TOKEN]
 availableSecrets:
   secretManager:

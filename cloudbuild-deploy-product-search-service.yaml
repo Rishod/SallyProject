@@ -14,21 +14,11 @@ steps:
     name: cloudnatived/helm-cloudbuilder
     env:
       - KUBECONFIG=/workspace/.kube/config
+    entrypoint: /bin/sh
     args:
-      - helm
-      - upgrade
-      - --install
-      - staging-sally-product-search-service
-      - --namespace=staging
-      - --values
-      - /workspace/k8s/product-search-service/values.yaml
-      - --set
-      - container.image=gcr.io/${PROJECT_ID}/sally-product-search-service
-      - --set
-      - container.tag=${BRANCH_NAME}-${SHORT_SHA}
-      - --set
-      - jwt.secret=qweefvr434v3ver
-      - /workspace/k8s/product-search-service
+      - -c
+      - |
+        helm upgrade --install staging-sally-product-search-service --namespace=staging --values /workspace/k8s/product-search-service/values.yaml --set container.image=gcr.io/${PROJECT_ID}/sally-product-search-service --set container.tag=${BRANCH_NAME}-${SHORT_SHA} --set jwt.secret=$$_JWT_TOKEN /workspace/k8s/product-search-service
     secretEnv: [_JWT_TOKEN]
 availableSecrets:
   secretManager:
