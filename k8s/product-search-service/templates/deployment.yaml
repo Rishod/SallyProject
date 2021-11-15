@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.container.name }}
+spec:
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Values.container.name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.container.name }}
+    spec:
+      containers:
+        - name: {{ .Values.container.name }}
+          image: {{ .Values.container.image }}:{{ .Values.container.tag }}
+          ports:
+            - containerPort: {{ .Values.container.port }}
+          readinessProbe:
+            httpGet:
+              port: {{ .Values.container.port }}
+              path: {{ .Values.service.readinessProbe }}
+          livenessProbe:
+            httpGet:
+              port: {{ .Values.container.port }}
+              path: {{ .Values.service.livenessProbe }}
+          env:
+            - name: ELASTICKSEARCH_HOST
+              value: {{ .Values.elastisearch.host }}
+            - name: AXON_SERVER_HOST
+              value: {{ .Values.axon.host }}
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.container.name }}-secrets
+                  key: jwtToken

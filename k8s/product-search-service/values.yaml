@@ -1,0 +1,15 @@
+service:
+  livenessProbe: /actuator/health/liveness
+  readinessProbe: /actuator/health/readiness
+container:
+  name: sally-product-search
+  port: 8080
+  image: productSearchImage # change during CD
+  tag: productSearchTag # change during CD
+replicas: 1
+elastisearch:
+  host: elasticsearch-elasticsearch-svc
+jwt:
+  secret: qweqwe # change during CD
+axon:
+  host: axonserver

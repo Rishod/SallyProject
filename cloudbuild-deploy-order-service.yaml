@@ -1,0 +1,44 @@
+steps:
+  - id: get-kube-config
+    dir: hello-cloudbuild
+    name: gcr.io/cloud-builders/kubectl
+    env:
+      - CLOUDSDK_CORE_PROJECT=${_CLOUDSDK_CORE_PROJECT}
+      - CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}
+      - CLOUDSDK_CONTAINER_CLUSTER=${_CLOUDSDK_CONTAINER_CLUSTER}
+      - KUBECONFIG=/workspace/.kube/config
+    args:
+      - cluster-info
+  - id: deploy
+    dir: hello-cloudbuild
+    name: cloudnatived/helm-cloudbuilder
+    env:
+      - KUBECONFIG=/workspace/.kube/config
+    args:
+      - helm
+      - upgrade
+      - --install
+      - staging-sally-order-service
+      - --namespace=staging
+      - --values
+      - /workspace/k8s/order-service/values.yaml
+      - --set
+      - container.image=gcr.io/${PROJECT_ID}/sally-order-service
+      - --set
+      - container.tag=${BRANCH_NAME}-${SHORT_SHA}
+      - --set
+      - datasource.password=BH9O83OOKDkODx8n
+      - --set
+      - jwt.secret=qweefvr434v3ver
+      - /workspace/k8s/order-service
+    secretEnv: [_DB_PASSWORD, _JWT_TOKEN]
+availableSecrets:
+  secretManager:
+    - versionName: projects/890679351586/secrets/db-password/versions/latest
+      env: _DB_PASSWORD
+    - versionName: projects/890679351586/secrets/sally-jwt-token/versions/latest
+      env: _JWT_TOKEN
+substitutions:
+  _CLOUDSDK_CORE_PROJECT: vlad-proj-test
+  _CLOUDSDK_COMPUTE_ZONE: us-central1-c
+  _CLOUDSDK_CONTAINER_CLUSTER: sally-cluster
