@@ -14,7 +14,9 @@ steps:
     name: cloudnatived/helm-cloudbuilder
     env:
       - KUBECONFIG=/workspace/.kube/config
+    entrypoint: /bin/sh
     args:
+      - -c
       - helm
       - upgrade
       - --install
@@ -27,11 +29,11 @@ steps:
       - --set
       - container.tag=${BRANCH_NAME}-${SHORT_SHA}
       - --set
-      - datasource.password=BH9O83OOKDkODx8n
+      - datasource.password=$$_DB_PASSWORD
       - --set
-      - jwt.secret=qweefvr434v3ver
+      - jwt.secret=$$_JWT_TOKEN
       - --set
-      - sally.superUserPassword=vlados
+      - sally.superUserPassword=$$_SUPER_USER_PASSWORD
       - /workspace/k8s/user-service
     secretEnv: [_DB_PASSWORD, _JWT_TOKEN, _SUPER_USER_PASSWORD]
 availableSecrets:
