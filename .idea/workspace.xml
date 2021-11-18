@@ -29,11 +29,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2724d9c-d84c-46d8-ad7a-d8a924eae5e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/architecture.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shop-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudbuild.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudbuild.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/sally/order/services/OrderSaga.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/sally/order/services/OrderSaga.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +53,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -147,7 +145,20 @@
       <recent name="com.sally.user.models" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.axon-server: Compose Deployment">
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sally.gateway.Test" />
+      <module name="gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sally.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -264,20 +275,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.order-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="commandLineOptions" value="--build" />
-          <option name="services">
-            <list>
-              <option value="order-service" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml.user-service-postgres: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -306,7 +303,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.user-service-postgres: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.gateway-service: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.user-service: Compose Deployment" />
@@ -318,14 +314,15 @@
       <item itemvalue="Spring Boot.Application (3)" />
       <item itemvalue="Spring Boot.Application (4)" />
       <item itemvalue="Docker.docker-compose.yml.axon-server: Compose Deployment" />
+      <item itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Docker.docker-compose.yml.axon-server: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.gateway-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.user-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.user-service-postgres: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -372,7 +369,7 @@
       <workItem from="1634991463529" duration="19020000" />
       <workItem from="1635410225866" duration="30370000" />
       <workItem from="1635771445797" duration="209000" />
-      <workItem from="1635777251212" duration="105424000" />
+      <workItem from="1635777251212" duration="120955000" />
     </task>
     <task id="LOCAL-00001" summary="fix initial commit">
       <created>1625145521446</created>
@@ -710,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636980865720</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="add readme">
+      <created>1636983415226</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1636983415226</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,7 +745,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create cloudbuild.yaml" />
     <MESSAGE value="fix cloudbuild.yaml" />
     <MESSAGE value="add short sha as image tag" />
     <MESSAGE value="add gateway and user-service helm charts" />
@@ -766,7 +769,8 @@
     <MESSAGE value="fix secrets interpolation" />
     <MESSAGE value="fix cloudbuild args" />
     <MESSAGE value="fix cloudbuild args for all deploys" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix cloudbuild args for all deploys" />
+    <MESSAGE value="add readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="add readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1192" y="254" key="#Docker" timestamp="1634302490635">
@@ -777,12 +781,12 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1076" y="456" key="#Environment_variables/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634301873526" />
-    <state x="-1545" y="106" key="#Project_Structure" timestamp="1635941240734">
-      <screen x="-1920" y="0" width="1920" height="1080" />
+    <state x="375" y="106" key="#Project_Structure" timestamp="1637157072870">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1545" y="106" key="#Project_Structure/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635941240734" />
     <state x="328" y="103" key="#Project_Structure/0.0.1680.1050@0.0.1680.1050" timestamp="1635855608464" />
-    <state x="375" y="106" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1634404964276" />
+    <state x="375" y="106" key="#Project_Structure/0.0.1920.1080@0.0.1920.1080" timestamp="1637157072870" />
     <state x="2055" y="106" key="#Project_Structure/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628169501292" />
     <state x="241" y="358" key="#SQL_Dialects" timestamp="1627466945388">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -826,13 +830,13 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1197" y="247" width="1097" height="585" key="#xdebugger.evaluate/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1630938492525" />
-    <state x="517" y="33" key="CommitChangelistDialog2" timestamp="1636980865392">
+    <state x="517" y="33" key="CommitChangelistDialog2" timestamp="1636983414822">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1195" y="72" key="CommitChangelistDialog2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951303732" />
     <state x="-1195" y="72" key="CommitChangelistDialog2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350009286" />
     <state x="333" y="85" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1636890470301" />
-    <state x="517" y="33" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1636980865392" />
+    <state x="517" y="33" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1636983414822" />
     <state x="125" y="83" key="CommitChangelistDialog2/0.25.1680.942@0.25.1680.942" timestamp="1635770317672" />
     <state x="2405" y="72" key="CommitChangelistDialog2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170841639" />
     <state x="384" y="66" width="1344" height="840" key="DiffContextDialog" timestamp="1634741500667">
@@ -844,35 +848,35 @@
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1210" y="411" key="Github.CreatePullRequestDialog/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1632302290126" />
-    <state width="1638" height="390" key="GridCell.Tab.0.bottom" timestamp="1636802235919">
+    <state width="1638" height="207" key="GridCell.Tab.0.bottom" timestamp="1637239485241">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1878" height="118" key="GridCell.Tab.0.bottom/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634808323075" />
-    <state width="1638" height="390" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1636802235919" />
+    <state width="1638" height="207" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1637239485241" />
     <state width="1878" height="118" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1634755644393" />
     <state width="1878" height="74" key="GridCell.Tab.0.bottom/0.25.1680.942@0.25.1680.942" timestamp="1635770509107" />
     <state width="1638" height="203" key="GridCell.Tab.0.bottom/0.25.1680.947@0.25.1680.947" timestamp="1627891708870" />
-    <state width="1638" height="390" key="GridCell.Tab.0.center" timestamp="1636802235916">
+    <state width="1638" height="207" key="GridCell.Tab.0.center" timestamp="1637239485236">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1878" height="118" key="GridCell.Tab.0.center/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634808323072" />
-    <state width="1638" height="390" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1636802235916" />
+    <state width="1638" height="207" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1637239485236" />
     <state width="1878" height="118" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1634755644391" />
     <state width="1878" height="74" key="GridCell.Tab.0.center/0.25.1680.942@0.25.1680.942" timestamp="1635770509106" />
     <state width="1638" height="203" key="GridCell.Tab.0.center/0.25.1680.947@0.25.1680.947" timestamp="1627891708868" />
-    <state width="1638" height="390" key="GridCell.Tab.0.left" timestamp="1636802235913">
+    <state width="1638" height="207" key="GridCell.Tab.0.left" timestamp="1637239485231">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1878" height="118" key="GridCell.Tab.0.left/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634808323071" />
-    <state width="1638" height="390" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1636802235913" />
+    <state width="1638" height="207" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1637239485231" />
     <state width="1878" height="118" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1634755644390" />
     <state width="1878" height="74" key="GridCell.Tab.0.left/0.25.1680.942@0.25.1680.942" timestamp="1635770509105" />
     <state width="1638" height="203" key="GridCell.Tab.0.left/0.25.1680.947@0.25.1680.947" timestamp="1627891708867" />
-    <state width="1638" height="390" key="GridCell.Tab.0.right" timestamp="1636802235917">
+    <state width="1638" height="207" key="GridCell.Tab.0.right" timestamp="1637239485237">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="1878" height="118" key="GridCell.Tab.0.right/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1634808323073" />
-    <state width="1638" height="390" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1636802235917" />
+    <state width="1638" height="207" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1637239485237" />
     <state width="1878" height="118" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1634755644392" />
     <state width="1878" height="74" key="GridCell.Tab.0.right/0.25.1680.942@0.25.1680.942" timestamp="1635770509107" />
     <state width="1638" height="203" key="GridCell.Tab.0.right/0.25.1680.947@0.25.1680.947" timestamp="1627891708869" />
@@ -906,13 +910,13 @@
     </state>
     <state x="-1545" y="106" key="SettingsEditor/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350167613" />
     <state x="328" y="103" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1627463454124" />
-    <state x="503" y="269" key="Vcs.Push.Dialog.v2" timestamp="1636980866767">
+    <state x="503" y="269" key="Vcs.Push.Dialog.v2" timestamp="1636983419694">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/-1920.0.1920.1080/0.0.1680.1050@-1920.0.1920.1080" timestamp="1635951305536" />
     <state x="-1417" y="269" key="Vcs.Push.Dialog.v2/0.0.1680.1050/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1635350170007" />
     <state x="440" y="262" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1636890473073" />
-    <state x="503" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1636980866767" />
+    <state x="503" y="269" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1636983419694" />
     <state x="440" y="260" key="Vcs.Push.Dialog.v2/0.25.1680.942@0.25.1680.942" timestamp="1635770320724" />
     <state x="2183" y="269" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/0.0.1680.1050@1680.0.1920.1080" timestamp="1628170843940" />
     <state x="631" y="307" key="chooseDestDirectoryDialog" timestamp="1627464404433">

@@ -98,7 +98,4 @@ public class OrderSaga {
         SagaLifecycle.end();
     }
 
-    public boolean test(boolean talking, int hour) {
-        return talking && (hour < 7 || hour > 20);
-    }
 }
